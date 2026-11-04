@@ -1,4 +1,4 @@
-# HR Interview Cheat Sheet
+
 ## ITC Last-Mile Project — How to Talk About It Naturally
 
 ---
