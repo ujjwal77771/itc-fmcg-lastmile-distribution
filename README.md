@@ -103,7 +103,7 @@ $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
 
 * [`ITC_LastMile_Project_Report.md`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/ITC_LastMile_Project_Report.md): Full technical & managerial case study report (~6,000 words).
 * [`ITC_LastMile_Presentation_Deck.md`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/ITC_LastMile_Presentation_Deck.md): 15-slide executive presentation deck.
-* [`HR_Interview_CheatSheet.md`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/HR_Interview_CheatSheet.md): Interview preparation guide — ITC logistics terminology (K1/K2/K3, WSP, WD, TIT, OTIF), formulas, and top 10 hardest interviewer questions with grounded answers.
+* [`InterviewtSheet.md`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/InterviewtSheet.md): Operational logistics discussion guide — ITC supply chain terminology (K1/K2/K3, WSP, WD, TIT, OTIF), formulas, and technical question-and-answer frameworks.
 * [`model/itc_model.xlsx`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/model/itc_model.xlsx): 10-sheet quantitative supply chain and DCF valuation model.
 * [`model/generate_sheets.py`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/model/generate_sheets.py): Automated generator for the Excel workbook.
 * [`model/verify_formulas.py`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/model/verify_formulas.py): Automated audit script verifying formula syntax, cross-sheet links, and OpenXML compatibility.

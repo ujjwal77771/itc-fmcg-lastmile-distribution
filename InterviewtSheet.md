@@ -1,9 +1,12 @@
 
-## ITC Last-Mile Project — How to Talk About It Naturally
+# Technical & Operational Discussion Guide: ITC FMCG Last-Mile Distribution
+
+> **Author:** Ujjwal Deep | B.Tech — Mechanical Engineering (3rd Year), BIT Mesra  
+> *A guide for technical discussions, supply chain calculations, and operational trade-offs.*
 
 ---
 
-## 2. PROJECT ELEVATOR PITCH (30-SECOND SUMMARY)
+## 1. PROJECT OVERVIEW & ELEVATOR SUMMARY
 
 > *"I did a project on last-mile logistics for ITC FMCG — specifically the K3 problem in rural distribution. It started from something I saw firsthand: I was in a village in Azamgarh, UP, and the local kirana store had stopped stocking Aashirvaad atta entirely — not because demand wasn't there, but because the supply chain couldn't reliably deliver to a village 60 km off the highway. The shopkeeper said he'd ordered once, it never came, so he switched brands.*
 >
