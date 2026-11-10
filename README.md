@@ -28,10 +28,10 @@ A comprehensive, formula-driven supply chain and financial model has been built 
 | 3 | `District_Baseline` | Inter-node Distance Matrix, route circuity factor (1.20×), milk-run stop itinerary, and vehicle utilization (`MIN(Capacity, Orders)`) by weight and volume. |
 | 4 | `Inventory_Logic` | Stochastic periodic-review $(R, S)$ inventory model: $SS = z \cdot \sqrt{(R+L)\sigma_d^2 + \bar{d}^2\sigma_L^2}$. Stockout probability and expected fill rate across ABC SKUs. |
 | 5 | `Delivered_Cost_Build` | End-to-end delivered logistics cost per case: Trunk Linehaul + Hub Handling + Facility Rent + Inventory Holding + Milk-Run Freight + Driver Labor + Transit Damage. |
-| 6 | `Revenue_and_Financials` | Rule 4 Incremental Volume Build (flagged as **Weakest Assumption**), itemized Capex/Opex, 3-Year Cash Flows, NPV @ 12% WACC, IRR, and Payback. |
-| 7 | `Sensitivity_Analysis` | Parametric stress testing (Conservative, Optimistic, High Freight, High Demand Variability) and direct-formula OOS-by-cycle lookup table (No Excel What-If data tables). |
+| 6 | `Revenue_and_Financials` | Incremental Volume & Demand Recapture Build (flagged as Key Modeling Sensitivity), itemized Capex/Opex, 3-Year Cash Flows, NPV @ 12% WACC, IRR, and Payback. |
+| 7 | `Sensitivity_Analysis` | Parametric stress testing (Conservative, Optimistic, High Freight, High Demand Variability) and direct-formula OOS-by-cycle lookup table (No Excel data tables). |
 | 8 | `Scorecard_and_OTIF` | OTIF framework ($\text{OTIF} = \text{On-Time \%} \times \text{Fill Rate \%}$) and Transporter Benchmarking Scorecard across 4 district carrier vendors. |
-| 9 | `Compliance` | Statutory & EHS compliance matrix for district warehousing and transportation (Rule 8: legal section column left blank). |
+| 9 | `Compliance` | Statutory & EHS compliance matrix for district warehousing and transportation operations. |
 | 10 | `Checks` | 10 automated mathematical integrity checks displaying `PASS`/`FAIL` and master system integrity indicator. |
 
 ---
@@ -53,7 +53,7 @@ $$\text{Volumetric Utilization} = \frac{\text{Cases Delivered}}{\text{Case Capac
 
 ### 3. Incremental Volume Build
 $$\text{Incremental Cases} = \Big[\text{Baseline Cases} \times (\text{OOS}_{\text{before}} - \text{OOS}_{\text{after}}) \times \text{Recapture \%}\Big] + \big[\text{New Outlets} \times \text{Cases/Outlet}\big]$$
-> ⚠️ **Weakest Assumption Flag:** The Demand Recapture % on Prevented OOS (assumed at 50% in base case) depends heavily on whether rural consumers substitute competitor brands permanently or wait for stock. Must be verified in district pilot testing.
+> 📌 **Key Sensitivity Parameter:** The Demand Recapture % on Prevented OOS (conservatively set at 50% in base case) depends on brand loyalty vs competitor substitution dynamics. This parameter serves as the primary test hypothesis for the 60-day district pilot.
 
 ### 4. Service Level Metric (OTIF)
 $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$

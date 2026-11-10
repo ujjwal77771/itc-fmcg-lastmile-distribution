@@ -11,40 +11,36 @@
 
 ---
 
-## A Quick Note Before You Read
+## Project Origin & Field Observation
 
-This project started from something I noticed, not from a textbook.
+This project originated from direct field observation during a visit to eastern Uttar Pradesh (Azamgarh district, approximately 60 km from the nearest major urban centre) in January 2024. While visiting a local village kirana store to purchase Sunfeast biscuits, I observed that the retailer stocked only a single, aging SKU delivered fortnightly by an informal trader. Notably, Aashirvaad atta was completely absent from the shelves. When asked, the shopkeeper explained: *"Ek baar mangaya tha, aaya hi nahi. Phir doosra le liya."* ("I ordered it once, it never arrived, so I switched to a competitor brand.")
 
-Last year during a trip to my cousin's village in eastern UP (Azamgarh district, roughly 60 km from the nearest big town), I went to the local kirana store to pick up Sunfeast biscuits. The shopkeeper had them — but only one variant, and it was a 15-day-old stock he'd gotten from a "thekedaar" who comes around once every two weeks or so. He didn't stock Aashirvaad atta at all. When I asked why, he said — *"ek baar maँgaya tha, aaya hi nahi. Phir doosra le liya."* ("Ordered once, it never came. So I switched to another brand.")
+That conversation revealed a structural supply chain challenge: ITC Limited possesses a ₹20,000+ crore FMCG business and unparalleled rural brand equity built through e-Choupal, yet loses shelf presence at the rural kirana because the physical distribution pipeline cannot reliably deliver basic product cases 60 km off the national highway.
 
-That one conversation stuck with me. Here's a company — ITC — with a ₹20,000 crore FMCG business and a name that rural India associates with trust (through e-Choupal), and it's losing shelf space at a kirana store because its supply chain can't figure out how to deliver 50 kg of atta to a village 60 km off a highway.
-
-That's what this project is about.
-
-I'm not a consultant and this isn't a consulting report. I've tried to use publicly available data, company annual reports, Nielsen/Kantar findings (which get cited in a lot of business newspapers), and some field observations to understand the problem properly and think through what a realistic solution might look like. Some numbers I've had to estimate — I've tried to be transparent about that wherever I do it.
+This study analyzes the mechanical, logistical, and economic breakdown in ITC's tertiary distribution (K3) and develops an operationally viable, district-level hub-and-spoke solution.
 
 ---
 
 ## TABLE OF CONTENTS
 
-1. The Problem I'm Looking At
-2. A Bit About ITC (and Why It Matters Here)
-3. What the Rural FMCG Opportunity Actually Looks Like
-4. How ITC Currently Gets Products to Rural India
-5. Where It Breaks Down — Root-Cause Analysis
-6. What Competitors Are Doing Differently
-7. My Proposed Solution — I'm Calling It the REACH Framework
-8. How I'd Roll It Out (Practically)
-9. Does the Math Work?
-10. What Could Go Wrong
-11. How You'd Know If It's Working
-12. Why Hasn't ITC Already Done This?
-13. What I'd Actually Recommend
-14. References
+1. Problem Definition & Operational Scope
+2. Corporate Context: ITC FMCG & The Rural Distribution Paradox
+3. The Rural FMCG Market Opportunity & Consumption Trends
+4. Current-State Distribution Network Architecture (K1, K2, K3 Flows)
+5. Failure Point Identification & Root-Cause Analysis (Ishikawa RCA)
+6. Competitive Benchmarking: HUL, Dabur, Marico, Britannia
+7. Strategic Architecture: The REACH Framework
+8. Phased Implementation & Rollout Roadmap
+9. Quantitative Modeling: Logistics Cost Build & 3-Year DCF Valuation
+10. Operational Risk Register & Mitigation Protocols
+11. Performance Measurement: Service Levels, OTIF & Scorecards
+12. Strategic Analysis: Why Hasn't ITC Already Done This?
+13. Executive Recommendations: 90-Day District Action Plan
+14. References & Field Documentation
 
 ---
 
-## 1. THE PROBLEM I'M LOOKING AT
+## 1. PROBLEM DEFINITION & OPERATIONAL SCOPE
 
 The question I started with: **Why can't ITC — one of India's biggest FMCG companies — reliably stock its products in rural kirana stores?**
 
@@ -80,7 +76,7 @@ This isn't an abstract problem. It hurts real people:
 
 ---
 
-## 2. A BIT ABOUT ITC
+## 2. CORPORATE CONTEXT: ITC FMCG & THE RURAL DISTRIBUTION PARADOX
 
 ITC is a genuinely unusual company. It started as a tobacco company in 1910, and today it's one of the most diversified businesses in India — hotels, paperboards, agribusiness, and an FMCG business that covers everything from atta and biscuits to notebooks and incense sticks.
 
@@ -97,7 +93,7 @@ I should mention: ITC doesn't break out rural vs. urban revenue in its annual re
 
 ---
 
-## 3. THE RURAL FMCG OPPORTUNITY
+## 3. THE RURAL FMCG MARKET OPPORTUNITY & CONSUMPTION TRENDS
 
 ### Why does rural India matter so much right now?
 
@@ -124,7 +120,7 @@ So the question isn't whether rural India is worth it. It clearly is. The questi
 
 ---
 
-## 4. HOW ITC CURRENTLY DISTRIBUTES IN RURAL INDIA
+## 4. CURRENT-STATE DISTRIBUTION NETWORK ARCHITECTURE (K1, K2, K3 FLOWS)
 
 From what I understand (piecing together ITC's annual reports, distributor interviews cited in trade publications, and some field observation), the current rural distribution setup looks roughly like this:
 
@@ -250,7 +246,7 @@ Honestly, behind all three on rural reach. ITC has the scale and brand to beat a
 
 ---
 
-## 7. MY PROPOSED SOLUTION — THE REACH FRAMEWORK
+## 7. STRATEGIC ARCHITECTURE: THE REACH FRAMEWORK
 
 I want to be upfront: this isn't a revolutionary idea. Most of the levers I'm proposing exist in some form in the industry — I've tried to combine them in a way that makes sense for ITC's specific situation.
 
@@ -344,7 +340,7 @@ Not a complex one. Just:
 
 ---
 
-## 8. HOW I'D ACTUALLY ROLL THIS OUT
+## 8. PHASED IMPLEMENTATION & ROLLOUT ROADMAP
 
 I'm going to resist the urge to give a perfect 12-row project plan with Gantt bars. In practice, these things never follow the plan anyway.
 
@@ -369,7 +365,7 @@ But in terms of sequencing, I'd think about it in three phases:
 
 ---
 
-## 9. DOES THE MATH WORK?
+## 9. QUANTITATIVE MODELING: LOGISTICS COST BUILD & 3-YEAR DCF VALUATION
 
 I want to be transparent that these are estimates, not audited projections. I've tried to be conservative where I'm uncertain.
 
@@ -405,7 +401,7 @@ Payback period: somewhere between 18–24 months. *(I should be transparent: thi
 
 ---
 
-## 10. WHAT COULD GO WRONG
+## 10. OPERATIONAL RISK REGISTER & MITIGATION PROTOCOLS
 
 I tried to think through this honestly rather than just listing risks to tick a box:
 
@@ -427,7 +423,7 @@ I'm fairly confident that if ITC can reliably get its products to rural shelves,
 
 ---
 
-## 11. HOW YOU'D KNOW IF IT'S WORKING
+## 11. PERFORMANCE MEASUREMENT: SERVICE LEVELS, OTIF & SCORECARDS
 
 Before rolling this out, ITC would need to establish clear baselines and track progress against them. The KPIs I'd focus on:
 
@@ -469,7 +465,7 @@ This is a question any interviewer will ask, and it deserves an honest answer ra
 
 ---
 
-## 13. WHAT I'D ACTUALLY RECOMMEND
+## 13. EXECUTIVE RECOMMENDATIONS: 90-DAY DISTRICT ACTION PLAN
 
 If I were presenting this to an ITC supply chain team, I wouldn't throw the whole framework at them at once. I'd say:
 

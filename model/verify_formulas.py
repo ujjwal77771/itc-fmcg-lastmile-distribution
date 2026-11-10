@@ -1,5 +1,7 @@
 """
-Verify all cell references and formula syntax in model/itc_model.xlsx
+Formula Integrity & Cross-Sheet Reference Verification
+Author: Ujjwal Deep | BIT Mesra
+Automated check ensuring zero broken references or syntax errors in model/itc_model.xlsx
 """
 import openpyxl
 import re
@@ -37,3 +39,4 @@ if errors:
         print(err)
 else:
     print("SUCCESS: 0 broken sheet references across all formulas!")
+
