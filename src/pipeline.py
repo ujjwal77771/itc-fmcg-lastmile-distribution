@@ -132,3 +132,4 @@ if __name__ == '__main__':
     print(f"4. Sourcing Network:  Total Inbound Linehaul Cost = ₹ {res['sourcing']['total_inbound_freight_cost']:,.2f}")
     print(f"5. Service Level:     OTIF = {res['service_levels']['composite_otif_pct']}% (Fill Rate: {res['service_levels']['case_fill_rate_pct']}%, On-Time: {res['service_levels']['on_time_rate_pct']}%)")
     print("=" * 70)
+

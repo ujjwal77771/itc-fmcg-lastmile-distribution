@@ -15,7 +15,7 @@
 
 This project originated from direct field observation during a visit to eastern Uttar Pradesh (Azamgarh district, approximately 60 km from the nearest major urban centre) in January 2024. While visiting a local village kirana store to purchase Sunfeast biscuits, I observed that the retailer stocked only a single, aging SKU delivered fortnightly by an informal trader. Notably, Aashirvaad atta was completely absent from the shelves. When asked, the shopkeeper explained: *"Ek baar mangaya tha, aaya hi nahi. Phir doosra le liya."* ("I ordered it once, it never arrived, so I switched to a competitor brand.")
 
-That conversation revealed a structural supply chain challenge: ITC Limited possesses a ₹20,000+ crore FMCG business and unparalleled rural brand equity built through e-Choupal, yet loses shelf presence at the rural kirana because the physical distribution pipeline cannot reliably deliver basic product cases 60 km off the national highway.
+That conversation revealed a structural supply chain challenge: ITC Limited possesses a ₹20,000+ crore FMCG business and deep rural brand equity built through e-Choupal, yet loses shelf presence at the rural kirana because the physical distribution pipeline cannot reliably deliver basic product cases 60 km off the national highway.
 
 This study analyzes the mechanical, logistical, and economic breakdown in ITC's tertiary last-mile distribution and develops an operationally viable, district-level hub-and-spoke solution.
 

@@ -98,7 +98,8 @@ def execute_daily_decision_support():
     print(f" * Loading Recommendation: {dense_cs} cases Atta (Dense) + {bulky_cs} cases Bingo! (Bulky)")
     print(f" * Payload Weight:  {load_stats['weight_kg']:>7.1f} kg / 1,250.0 kg  ({load_stats['weight_utilization_pct']:>5.1f}% utilization)")
     print(f" * Cargo Volume:    {load_stats['volume_cbm']:>7.2f} cbm /    4.80 cbm  ({load_stats['volume_utilization_pct']:>5.1f}% utilization)")
-    print(f" * Operational Gain: Eliminates 'empty air' freight penalty by interleaving heavy staples with light snacks.")
+    print(f" * Operational Insight: Interleaving heavy staples with volumetric snacks prevents paying freight for empty air.")
+    print(f" * Practical Note: Theoretical knapsack is 99%+, but crate clearances yield ~80-88% real-world payload capacity.")
 
     # ---------------------------------------------------------
     # 4. MULTI-DEPOT INBOUND TRANSPORTATION LP

@@ -13,7 +13,7 @@ import numpy as np
 
 class OTIFAnalyticsEngine:
     """
-    Enterprise Service Level & OTIF Evaluation Engine.
+    Service Level & OTIF Evaluation Engine.
     Decouples warehouse stock availability from transporter delivery reliability.
     """
 

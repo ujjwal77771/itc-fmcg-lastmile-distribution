@@ -14,7 +14,7 @@ from scipy.stats import norm
 
 class InventoryAnalyticsEngine:
     """
-    Industrial Inventory Analytics Engine for Multi-Echelon FMCG Distribution.
+    Inventory Analytics Engine for Multi-Echelon FMCG Distribution.
     Implements standard periodic-review (R, S) and continuous-review (s, Q) policies.
     """
 

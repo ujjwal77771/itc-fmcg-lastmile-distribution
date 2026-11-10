@@ -267,3 +267,4 @@ elif nav_option == "5. Service Level & OTIF Diagnostics":
     with c2:
         st.subheader("Lost Turnover Impact (INR)")
         st.bar_chart(df_cuts.set_index('cut_reason')['estimated_lost_turnover_inr'])
+
