@@ -77,7 +77,7 @@ $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
 
 ### 💵 Base-Case Financial Scenario Projections (150 District Hubs)
 
-> ⚠️ **Methodological Note on Financial Outputs:** The financial returns below (NPV ₹379.9 Cr, Payback ~20.5 months, IRR ~114%) are **indicative base-case scenario projections**, not empirical findings. They depend heavily on two operational working assumptions: (1) a **50% Demand Recapture Rate** on prevented retail out-of-stock events, and (2) **800 new direct retail outlets added per district hub** averaging ~5 cases/month (~65 cases/year). These assumptions represent planning hypotheses to be calibrated during district pilot testing.
+> ⚠️ **Methodological Note on Financial Outputs:** The financial returns below (NPV ₹379.9 Cr, Payback 15.1 months, IRR 114%) are **indicative base-case scenario projections**, not empirical findings. They depend heavily on two operational working assumptions: (1) a **50% Demand Recapture Rate** on prevented retail out-of-stock events, and (2) **800 new direct retail outlets added per district hub** averaging ~5 cases/month (~65 cases/year). These assumptions represent planning hypotheses to be calibrated during district pilot testing.
 
 | Financial Metric | Base-Case Scenario Output | Modeling Mechanics & Assumptions |
 |---|---|---|
@@ -85,7 +85,7 @@ $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
 | **Cumulative 3-Year Incremental Revenue** | **₹2,806.5 Crores** | Phased 3-year rollout (50 hubs Y1 $\rightarrow$ 150 hubs Y2/Y3) |
 | **Total 3-Year Capex & Opex Investment** | **₹430.0 Crores** | Hub leases, sub-stockist SLAs, SFA rollout, and VLE onboarding |
 | **3-Year Project NPV (@ 12% WACC)** | **₹379.9 Crores** | Discounted cash flow return at 12% working hurdle rate |
-| **Modeled Simple Payback Period** | **~20.5 Months** | Capital recovery achieved in Year 2 |
+| **Modeled Simple Payback Period** | **15.1 Months** | Matches workbook formula `=ABS(B33)/(C23-C28)*12` |
 | **Modeled IRR** | **~114%** | Operating leverage on asset-light leased cross-dock facilities |
 
 ---

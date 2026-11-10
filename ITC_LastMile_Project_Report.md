@@ -17,7 +17,7 @@ This project originated from direct field observation during a visit to eastern 
 
 That conversation revealed a structural supply chain challenge: ITC Limited possesses a ₹20,000+ crore FMCG business and unparalleled rural brand equity built through e-Choupal, yet loses shelf presence at the rural kirana because the physical distribution pipeline cannot reliably deliver basic product cases 60 km off the national highway.
 
-This study analyzes the mechanical, logistical, and economic breakdown in ITC's tertiary distribution (K3) and develops an operationally viable, district-level hub-and-spoke solution.
+This study analyzes the mechanical, logistical, and economic breakdown in ITC's tertiary last-mile distribution and develops an operationally viable, district-level hub-and-spoke solution.
 
 ---
 
@@ -26,7 +26,7 @@ This study analyzes the mechanical, logistical, and economic breakdown in ITC's 
 1. Problem Definition & Operational Scope
 2. Corporate Context: ITC FMCG & The Rural Distribution Paradox
 3. The Rural FMCG Market Opportunity & Consumption Trends
-4. Current-State Distribution Network Architecture (K1, K2, K3 Flows)
+4. Current-State Distribution Network Architecture (Primary, Secondary, and Tertiary Last-Mile Flows)
 5. Failure Point Identification & Root-Cause Analysis (Ishikawa RCA)
 6. Competitive Benchmarking: HUL, Dabur, Marico, Britannia
 7. Strategic Architecture: The REACH Framework
@@ -72,7 +72,7 @@ This isn't an abstract problem. It hurts real people:
 | **Rural kirana retailer** | Loses sales when ITC products are OOS (Out of Stock). Allocates scarce shelf space to whichever brand shows up reliably — even if ITC's brand has better consumer pull. Working capital is tied up waiting for irregular deliveries. |
 | **Rural consumer** | Gets fewer choices, sometimes stale stock, and pays more if buying from a farther shop. Defaults to whatever is available — brand loyalty breaks. |
 | **Sub-stockist** | Earns thin margins on informal arrangement with no route plan, no volume guarantee, no career path. Serves easy-to-reach villages, skips remote ones. |
-| **ITC** | Loses revenue, market share, and shelf space to competitors who show up more reliably. Brand equity built through e-Choupal (procurement trust) doesn't translate to FMCG sales. K3 cost-per-case in rural is 2-3× urban, making the ROI case harder. |
+| **ITC** | Loses revenue, market share, and shelf space to competitors who show up more reliably. Brand equity built through e-Choupal (procurement trust) doesn't translate to FMCG sales. Last-mile cost-per-case in rural is 2–3× urban, making the ROI case harder. |
 
 ---
 
@@ -120,22 +120,22 @@ So the question isn't whether rural India is worth it. It clearly is. The questi
 
 ---
 
-## 4. CURRENT-STATE DISTRIBUTION NETWORK ARCHITECTURE (K1, K2, K3 FLOWS)
+## 4. CURRENT-STATE DISTRIBUTION NETWORK ARCHITECTURE (PRIMARY, SECONDARY, TERTIARY FLOWS)
 
 From what I understand (piecing together ITC's annual reports, distributor interviews cited in trade publications, and some field observation), the current rural distribution setup looks roughly like this:
 
 ```
 ITC Factory / Plant
-        ↓  ── K1 (Primary Freight) ──  works well
+        ↓  ── Primary Freight (Factory to Warehouse) ──  works well
 Central / Mother Warehouse
 (Mumbai, Kolkata, Delhi, Hyderabad, Bengaluru — roughly)
-        ↓  ── K2 (Secondary Freight) ──  works reasonably well
+        ↓  ── Secondary Freight (Warehouse to Distributor) ──  works reasonably well
 Regional Distribution Centre (RDC)
 (~30-odd locations across India)
         ↓
 Preferred Stockist / Wholesale Distributor (WD)
 (~3,500+ distributors nationally — est.)
-        ↓  ── K3 (Tertiary Freight) ──  THIS IS WHERE IT BREAKS
+        ↓  ── Tertiary Last-Mile Freight (Distributor to Kirana) ──  THIS IS WHERE IT BREAKS
 Sub-Stockist (informal, unregistered, not in DMS)
         ↓
 Rural Kirana Store
@@ -158,20 +158,20 @@ The Preferred Stockist gets a report. The sub-stockist is a black box.
 
 ## 5. WHERE IT BREAKS DOWN — ROOT-CAUSE ANALYSIS
 
-I tried to map the specific failure points rather than just saying "rural distribution is bad." Here's a structured cause-and-effect breakdown of why ITC's rural K3 fails:
+I tried to map the specific failure points rather than just saying "rural distribution is bad." Here's a structured cause-and-effect breakdown of why ITC's rural last-mile distribution fails:
 
 ```
-                         RURAL K3 DISTRIBUTION FAILURE
+                         RURAL LAST-MILE DISTRIBUTION FAILURE
                                     │
     ┌──────────────┬────────────────┼────────────────┬──────────────────┐
     │              │                │                │                  │
  DISTANCE &     WORKING         DEMAND            NETWORK         ECONOMICS
  INFRASTRUCTURE CAPITAL         VISIBILITY        STRUCTURE
     │              │                │                │                  │
- Poor roads     Sub-stockists   Zero sell-out     Informal         K3 cost-per-
+ Poor roads     Sub-stockists   Zero sell-out     Informal         Last-mile   
  from highway   operate on      data below PS     sub-stockists    case is 2-3x
-    │           ₹5-10K capital      │              not in DMS       urban
- Long K3 TIT       │            No SFA/app at        │                │
+    │           ₹5-10K capital      │              not in DMS       cost 2-3x   
+ Long delivery TIT       │            No SFA/app at        │                │
  (10-14 days)  Can't hold       retailer level    No territory     Thin margins
     │           buffer stock        │              mapping          on ₹5-10
  Low drop       for lean          ITC plans        No targets       price-point
@@ -182,9 +182,9 @@ I tried to map the specific failure points rather than just saying "rural distri
                rural orders        → wrong SKUs                    remote villages
 ```
 
-**5.1 The K3 TIT (Time in Transit) is too long**
+**5.1 Last-mile replenishment cycle / Time in Transit (TIT) is too long**
 
-In urban markets, a retailer can expect restocking every 4–6 days. In rural, it's more like 10–14 days on average. *(This estimate comes from trade publication interviews with FMCG distributors in ET and Mint — I haven't been able to find an ITC-specific official figure, so I'm treating 10-14 days as an industry-level estimate for rural K3 TIT, not an ITC-confirmed number.)*
+In urban markets, a retailer can expect restocking every 4–6 days. In rural, it's more like 10–14 days on average. *(This estimate comes from trade publication interviews with FMCG distributors in ET and Mint — I haven't been able to find an ITC-specific official figure, so I'm treating 10-14 days as an industry-level estimate for rural last-mile delivery transit time (TIT), not an ITC-confirmed number.)*
 
 14 days is a long time. A rural kirana store has limited shelf space and limited working capital. If ITC's restock comes every 14 days and Parle's comes every 8 days, the retailer will naturally dedicate more shelf space to Parle. That space compounds over time.
 
@@ -197,7 +197,7 @@ That means roughly 1 in 4-5 orders isn't fulfilled properly. That gap is product
 *(For context, HUL's rural fill rate is estimated at 85–90% per trade reports — not perfect either, but meaningfully better.)*
 
 **Important distinction I want to be clear about (Fill Rate vs. Stockout Rate vs. Inventory Model):**
-Fill rate (measured at the distributor/warehouse) is NOT the same as stockout rate (measured at the retail shelf). A distributor might ship 80% of what was ordered (80% fill rate), but the retail stockout rate could be worse because of additional losses from K3 delays, wrong SKU allocation, and ordering gaps.
+Fill rate (measured at the distributor/warehouse) is NOT the same as stockout rate (measured at the retail shelf). A distributor might ship 80% of what was ordered (80% fill rate), but the retail stockout rate could be worse because of additional losses from last-mile transit delays, wrong SKU allocation, and ordering gaps.
 
 Furthermore, there is a crucial reconciliation between theoretical inventory formulas and ground-level retail reality:
 - In the theoretical periodic-review inventory model ($SS = z \times \sqrt{(R+L)\sigma_d^2 + \bar{d}^2\sigma_L^2}$), setting $z = 1.645$ targets a 95% cycle service level, or a **5% cycle stockout probability**.
@@ -218,9 +218,9 @@ Rural retailers often have 10-15 square feet of display space. ITC's distributor
 
 Additionally, the Minimum Order Quantities (MOQs) set for urban distributors don't work for rural sub-stockists operating on ₹5,000-10,000 working capital. They can't order a full case of 48 units — they need half-cases or mixed loads. The ordering system isn't designed for this.
 
-**5.5 The K3 economics don't add up for remote villages**
+**5.5 Last-mile unit economics don't add up for remote villages**
 
-If you're an informal sub-stockist covering villages 20–30 km from town, the logistics cost of the trip eats into your margin pretty quickly. The K3 cost-per-case in rural India is estimated at 2-3× the urban equivalent — longer distances, partial truck loads, poor roads, and fewer drops per trip. Many sub-stockists simply don't go that far unless they have enough orders to make the trip worth it. This means the most remote villages get the worst service — which is exactly where ITC's reach gap is widest.
+If you're an informal sub-stockist covering villages 20–30 km from town, the logistics cost of the trip eats into your margin pretty quickly. Last-mile cost-per-case in rural India is estimated at 2–3× the urban equivalent — longer distances, partial truck loads, poor roads, and fewer drops per trip. Many sub-stockists simply don't go that far unless they have enough orders to make the trip worth it. This means the most remote villages get the worst service — which is exactly where ITC's reach gap is widest.
 
 ---
 
@@ -437,7 +437,7 @@ A critical finding of the activity-based cost build (`Delivered_Cost_Build`) is 
 
 ### 3-Year DCF Valuation & Base-Case Scenario Projections
 
-> ⚠️ **Methodological Note on Returns:** The valuation outputs below (NPV ₹379.9 Cr, Payback ~20.5 months, IRR ~114%) represent **indicative base-case scenario projections of the financial model**, rather than empirical findings. They depend directly on two central working hypotheses: (1) a 50% demand recapture rate on prevented store out-of-stock events, and (2) adding 800 new direct retail outlets per district hub averaging ~5 cases/month (~65 cases/year). Because these assumptions are sensitive to local competitor substitution and route dynamics, they must be treated as pilot test hypotheses to be calibrated against actual field audit data before full capital commitment.
+> ⚠️ **Methodological Note on Returns:** The valuation outputs below (NPV ₹379.9 Cr, Payback 15.1 months, IRR ~114%) represent **indicative base-case scenario projections of the financial model**, rather than empirical findings. They depend directly on two central working hypotheses: (1) a 50% demand recapture rate on prevented store out-of-stock events, and (2) adding 800 new direct retail outlets per district hub averaging ~5 cases/month (~65 cases/year). Because these assumptions are sensitive to local competitor substitution and route dynamics, they must be treated as pilot test hypotheses to be calibrated against actual field audit data before full capital commitment.
 
 Financial projections in `model/itc_model.xlsx` evaluate cash flows over a 3-year horizon:
 
@@ -446,7 +446,7 @@ Financial projections in `model/itc_model.xlsx` evaluate cash flows over a 3-yea
 * **Gross Margin:** **38.0%** (working assumption based on ITC FMCG segment gross profitability).
 * **Cost of Capital (WACC):** **12.0%** (working assumption reflecting FMCG corporate hurdle rate).
 * **Net Present Value (NPV @ 12%):** **₹379.9 Crores**.
-* **Simple Payback Period:** **~20.5 Months** (full capital recovery achieved within Year 2).
+* **Simple Payback Period:** **15.1 Months** (matches model formula `=ABS(B33)/(C23-C28)*12`).
 * **Internal Rate of Return (IRR):** Modeled at ~114%, driven by high operating leverage on low fixed assets. *(Presented as an illustrative scenario output under full outlet execution, not as a core operational finding).*
 
 ---
@@ -483,7 +483,7 @@ Before rolling this out, ITC would need to establish clear baselines and track p
 |---|---|---|---|
 | Rural direct outlet reach | ~2.4 million (est.) | ~2.9 million | ~3.8 million |
 | Rural distributor OTIF (In-Full) | ~75-80% (est.) | ~85% | ~90-92% |
-| K3 TIT — replenishment cycle (rural) | ~10-14 days (est.) | ~7-9 days | ~5-7 days |
+| Last-mile replenishment cycle (TIT) | ~10-14 days (est.) | ~7-9 days | ~5-7 days |
 | Retail OOS (sampled at outlet level) | Not currently measured | ~14% (est.) | ~8% |
 | Sub-stockists with formal agreements | ~10% (est.) | ~40% | ~85% |
 
@@ -507,9 +507,9 @@ This is a question any interviewer will ask, and it deserves an honest answer ra
 
 **1. ITC's rural DNA is procurement, not distribution.** e-Choupal was built by the Agribusiness division to buy from farmers. The FMCG division is a separate organisation with different systems and teams. The rural trust ITC earned through procurement never systematically transferred to FMCG distribution — different people, different incentives, different KPIs.
 
-**2. The K3 economics are genuinely hard.** Rural K3 cost-per-case is 2-3× urban. ITC's rural-relevant SKUs (₹5 biscuits, ₹10 agarbatti) generate thin absolute margins per unit. The ROI case for rural K3 investment isn't obvious unless you model the full network effect — which requires the kind of data ITC currently doesn't have (because it has no visibility below the PS level). It's a chicken-and-egg problem.
+**2. Last-mile unit economics are genuinely hard.** Rural last-mile delivery cost-per-case is 2–3× urban. ITC's rural-relevant SKUs (₹5 biscuits, ₹10 agarbatti) generate thin absolute margins per unit. The ROI case for rural last-mile distribution investment isn't obvious unless you model the full network effect — which requires the kind of data ITC currently doesn't have (because it has no visibility below the PS level). It's a chicken-and-egg problem.
 
-**3. ITC was focused on other priorities.** The FMCG business scaled from ~₹14,000 crore (FY21) to ~₹20,000 crore (FY24) — mostly through urban distribution expansion, new categories, and modern trade. Rural K3 is a slow-payoff structural problem. Public companies tend to invest where returns are fastest and most visible.
+**3. ITC was focused on other priorities.** The FMCG business scaled from ~₹14,000 crore (FY21) to ~₹20,000 crore (FY24) — mostly through urban distribution expansion, new categories, and modern trade. Rural last-mile distribution is a slow-payoff structural problem. Public companies tend to invest where returns are fastest and most visible.
 
 **4. The distribution network was inherited from cigarettes.** ITC's original distribution strength was built for the cigarette business — high-value, small-volume, urban-heavy. The FMCG portfolio (atta, biscuits, agarbatti) has completely different logistics requirements: high-volume, bulky, low-value, and needs deep rural penetration. The legacy network architecture hasn't fully adapted.
 
