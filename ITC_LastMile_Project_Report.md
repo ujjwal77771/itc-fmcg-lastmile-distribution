@@ -4,10 +4,10 @@
 
 ---
 
-> **Name:** [Your Name]  
-> **Programme:** MBA — Operations & Supply Chain  
-> **Institute:** [Your College]  
-> **Year:** 2024–25
+> **Name:** Ujjwal Deep  
+> **Programme:** B.Tech — Mechanical Engineering (3rd Year)  
+> **Institute:** Birla Institute of Technology (BIT), Mesra  
+> **Year:** 2026-27
 
 ---
 

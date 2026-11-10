@@ -2,7 +2,7 @@
 ## ITC FMCG: Why Rural India Can't Find Aashirvaad on the Shelf
 ### And What the Supply Chain Fix Looks Like
 
-**[Your Name] | [Your College] | MBA — Operations & SCM**
+**Ujjwal Deep | BIT Mesra | B.Tech — Mechanical Engineering**
 
 ---
 
@@ -13,7 +13,7 @@
 ## Why Rural India Can't Find ITC Products on the Shelf
 ### A Last-Mile Distribution Problem
 
-[Your Name] | [College] | MBA Operations & SCM | 2024–25
+Ujjwal Deep | BIT Mesra | B.Tech Mechanical Engineering | 2026–27
 
 ---
 
@@ -352,7 +352,7 @@ The shopkeeper in Azamgarh is waiting.
 
 **Thank you**
 
-[Your Name] | [College] | [Email] | [LinkedIn]
+Ujjwal Deep | BIT Mesra | Mechanical Engineering
 
 *Data sources: ITC & HUL Annual Reports, Nielsen, Kantar, CSC India, personal field observation (Azamgarh, UP, Jan 2024)*
 
