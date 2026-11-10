@@ -16,7 +16,7 @@ When I asked the shopkeeper why he wasn't stocking India's leading atta brand, h
 
 That conversation stuck with me. ITC is an enterprise with ₹20,000+ crore FMCG revenue and deep rural credibility through e-Choupal. Yet on the retail shelf 60 km off the highway, it loses sales to local brands simply because the physical distribution pipeline cannot reliably deliver cases on time.
 
-I built this project to investigate the mechanics of that breakdown and to design a practical, data-driven decision support system that an operations analyst could actually use to fix it.
+I built this project to investigate the mechanics of that breakdown and to design a practical, data-driven decision support system that an operations analyst could actually use to evaluate solutions.
 
 ---
 
@@ -28,7 +28,7 @@ In multi-echelon FMCG logistics, products move through distinct layers:
 [ ITC Manufacturing Plant / Integrated Food Park ]
   (Haridwar / Panchgram / Pune)
         │
-        │── Primary Freight (30-40T Multi-Axle Trucks / FTL) ── Works smoothly
+        │── Primary Linehaul Freight (30-40T Multi-Axle Trucks / FTL) ── Works smoothly
         ▼
 [ Regional Distribution Centre (RDC) ]
   (Varanasi / Lucknow / Patna)
@@ -43,15 +43,18 @@ In multi-echelon FMCG logistics, products move through distinct layers:
 ```
 
 1. **The Math of Channel Buffering:**  
-   Under the current informal setup, rural replenishment happens on an erratic 10–14 day cycle ($R = 12$ days) with high delivery lead-time variability ($\sigma_L \approx 3.0$ days). Under periodic-review inventory theory:
+   Under the current informal setup, rural replenishment happens on an erratic 10–14 day cycle ($R = 12$ days) with high delivery lead-time arrival variability ($\sigma_L \approx 3.0$ days). Under periodic-review inventory theory:
    $$SS = z \cdot \sqrt{(R + L)\sigma_d^2 + \bar{d}^2\sigma_L^2}$$
-   To guarantee a 95% service level ($z = 1.645$) for a high-velocity staple like Aashirvaad Atta, a stockist must hold approximately **635 cases of buffer stock**.
+   For a high-velocity benchmark SKU like Aashirvaad Atta ($d = 120$ cases/day across a cluster of ~25–30 rural kiranas), a stockist node mathematically requires approximately **635 cases of buffer stock** to maintain a 95% cycle service level ($z = 1.645$).
 
 2. **The Working Capital Reality:**  
-   Informal sub-stockists operate on ₹5,000 to ₹10,000 of working capital and carry fewer than 15 cases. Because they cannot absorb channel volatility, small delivery delays trigger instant stockouts at retail stores, producing the **~20% out-of-stock (OOS) rate** observed in the field.
+   Informal sub-stockists operate on ₹5,000 to ₹10,000 of working capital and carry fewer than 15 cases. Because they cannot absorb channel volatility, small delivery delays trigger immediate stockouts at retail stores, contributing to the **estimated ~20% retail out-of-stock (OOS) rate** commonly cited in FMCG trade reports and field benchmarks.
 
-3. **The Freight Cost Truth:**  
-   Establishing a dedicated rural cross-dock hub in Varanasi is **an availability and OTIF enabler, not a freight cost-cutting exercise**. The delivered logistics cost drops from ₹74.55 to ₹71.86 per case—a net variance of just -₹2.69/case (-3.6%). The hub pays for itself not through cheap freight, but by lifting composite distributor OTIF from ~56% to ~90% and protecting shelf share.
+3. **Sensitivity to Lead-Time Uncertainty ($\sigma_L$):**  
+   Why does safety stock drop from 635 to 186 cases (-70.7%) under the proposed hub? Because delivery arrival variability ($\sigma_L$) drops from 3.0 days to 0.5 days. Because $\sigma_L$ is multiplied by $\bar{d}^2 = 14,400$, lead-time variance dominates the equation. Even if the hub only manages to stabilize $\sigma_L$ to 1.0 day or 1.5 days instead of 0.5 days, required buffer stock still drops by **60.2%** (to 253 cases) or **47.2%** (to 336 cases).
+
+4. **The Freight Cost Truth:**  
+   Establishing a dedicated rural cross-dock hub in Varanasi is **an availability and OTIF enabler, not a freight cost-cutting exercise**. The delivered logistics cost drops from ₹74.55 to ₹71.86 per case—a net variance of just -₹2.69/case (-3.6%). The hub pays for itself not through cheap freight, but by enabling higher service levels and protecting retail shelf share.
 
 ---
 
@@ -83,7 +86,7 @@ Rather than writing generic strategy slides, I implemented the operational logic
                     └───────────────────────────────────────────────┘
 ```
 
-### Why I Made These Technical Choices:
+### Technical Design Choices:
 
 * **Periodic Review $(R, S)$ over Continuous Review $(s, Q)$:**  
   Continuous review models assume real-time IoT or telemetry signals on store shelves. Rural kiranas in eastern UP do not have RFID or automated order triggers; they are visited once a week or once a fortnight on fixed salesperson beats. Periodic review is the only realistic representation of how FMCG beat distribution works.
@@ -94,7 +97,7 @@ Rather than writing generic strategy slides, I implemented the operational logic
   * *Bingo! Snacks 45g:* Volumetric cargo ($44\text{ kg/m}^3$). If you load only Bingo, the cargo bay fills up ("cubes out") at just 210 kg payload (17% weight utilization), meaning you pay freight for shipping empty air.
   * *The Pairing Heuristic:* My optimizer calculates the integer case balance (e.g., 70 cases Atta + 26 cases Bingo!) to drive both weight and volume utilization into the 80–90% range under real-world crate stacking constraints.
 
-* **SciPy HiGHS Linear Programming over PuLP / Proprietary Solvers:**  
+* **SciPy HiGHS Linear Programming over Proprietary Solvers:**  
   Inbound factory-to-depot sourcing is modeled as a classic transportation problem minimizing $\sum c_{ij} X_{ij}$. I chose `scipy.optimize.linprog` with the HiGHS simplex method because it runs on standard Python without requiring external commercial solver binaries (like Gurobi or CPLEX) and solves in under 5 milliseconds.
 
 * **Embedded SQLite Database with Analytical SQL Views:**  
@@ -107,28 +110,30 @@ Rather than writing generic strategy slides, I implemented the operational logic
 
 ## 📊 The Financial & Supply Chain Model (`model/itc_model.xlsx`)
 
-The financial model is a 10-sheet dynamic Excel workbook built from scratch in `model/generate_sheets.py` and validated by `model/verify_formulas.py` (296 verified formulas, 0 circular references, 0 `#NAME?` errors).
+The quantitative model is an 11-sheet dynamic Excel workbook generated by `model/generate_sheets.py` and validated by `model/verify_formulas.py` (336 verified formulas, 0 circular references, 0 `#NAME?` errors).
 
-### Workbook Structure:
+### Workbook Architecture (11 Sheets):
 1. `Summary_Dashboard`: High-level operational, service-level, and financial variance (Current vs. Hub Setup).
 2. `Assumptions_Inputs`: Sourced parameters (volumes, distances, freight rates, margins, holding costs).
 3. `District_Baseline`: Inter-node distance matrix (Azamgarh cluster), circuity factor (1.20×), and vehicle payload/cube factors.
 4. `Inventory_Logic`: Stochastic periodic safety stock formulas and stockout probability modeling.
 5. `Delivered_Cost_Build`: Step-by-step cost build per case (Trunk + Handling + Rent + Carrying + Milk-Run + Transit Loss).
-6. `Revenue_and_Financials`: 3-year phased DCF cash flow build, NPV @ 12% WACC, IRR, and Simple Payback.
-7. `Sensitivity_Analysis`: Scenario stress-testing across demand variance, freight inflation, and out-of-stock recapture rates.
+6. `Revenue_and_Financials`: 3-year phased DCF cash flow build, cumulative cash flows, NPV @ 12% WACC, IRR, and Cumulative Payback.
+7. `Sensitivity_Analysis`: Scenario stress-testing, direct-formula OOS lookups, and $\sigma_L$ arrival variance sensitivity table.
 8. `Scorecard_and_OTIF`: Composite OTIF framework ($\text{On-Time \%} \times \text{Fill Rate \%}$) and carrier vendor benchmarking.
-9. `Compliance`: Statutory warehousing and logistics EHS compliance matrix.
-10. `Checks`: 10 automated mathematical integrity checks (all reading `PASS`).
+9. `Hub_Design_and_TAT`: 1,500 sq ft facility footprint allocation, dock doors, truck turnaround time (TAT: 4.5h $\rightarrow$ 1.8h), and demurrage penalty savings (~₹16,200/mo per hub).
+10. `Compliance`: Statutory warehousing and logistics EHS compliance matrix.
+11. `Checks`: 12 automated mathematical integrity checks (all reading `PASS`).
 
 ### Defending the Numbers in an Interview:
 
 | Metric | Modeled Value | Honest Engineering Defense |
 |---|---|---|
-| **Simple Payback** | **15.1 Months** | Matches formula `=ABS(B33)/(C23-C28)*12`. It takes ~15 months to recover the initial leased hub capex from operational margin generation. |
-| **Modeled IRR** | **~114%** | This high return is an output of an **asset-light leased cross-dock model** (low upfront capex of ~₹65 Cr across 150 hubs) paired with high operating leverage. |
-| **Underlying Assumptions** | **50% Recapture & 800 Outlets** | The returns rest on two working assumptions: recapturing 50% of currently lost stockout sales, and onboarding 800 new rural outlets per hub (~5 cases/month). If recapture drops to 25%, payback doubles to ~30 months. I treat this as an optimistic scenario projection, not a guaranteed finding. |
+| **Cumulative Payback** | **17.5 Months (1.46 Yrs)** | Formula: `=12+(ABS(C34)/D33)*12`. In Year 0 we invest -₹77 Cr. In Year 1 (50-hub pilot), net cash flow is -₹48.8 Cr due to ₹110 Cr expansion capex, taking cumulative deficit to -₹125.8 Cr. In Year 2 (150 hubs), cash flow turns positive (+₹273.5 Cr). Cumulative break-even is reached 5.5 months into Year 2. |
+| **Modeled IRR** | **~114%** | This high return is an output of an **asset-light leased cross-dock model** (low upfront capex of ~₹65 Cr across 150 hubs) paired with high operating leverage. Crucially, it relies on 50% demand recapture and 800 new outlets per hub. If recapture drops to 25%, payback doubles to ~30 months and IRR normalizes. |
+| **Operational Targets vs. Outputs** | **OTIF 90% & Fill Rate 92%** | These are **operational design targets / SLA benchmarks**, not direct physics outputs. The true calculated outputs of the model are the safety stock reduction (-70.7%), net delivered logistics cost (-₹2.69/case), and vehicle load factor (80.8% vol / 86.9% wt). |
 | **Delivered Cost** | **₹74.55 $\rightarrow$ ₹71.86/case** | The saving is only ₹2.69/case (3.6%). The business justification for the hub is **service reliability and shelf presence**, not dramatic freight cost reduction. |
+| **Truck Turnaround Time (TAT)** | **4.5 hrs $\rightarrow$ 1.8 hrs** | Palletized unloading and dock scheduling reduce linehaul detention, cutting demurrage incidents from 18% to <2% and saving ~₹16,200/month per hub (~₹2.91 Cr/year network-wide). |
 
 ---
 
@@ -171,7 +176,7 @@ streamlit run app.py
 ```bash
 python model/verify_formulas.py
 ```
-Audits all 296 formulas in `model/itc_model.xlsx` to confirm zero broken links or invalid function names.
+Audits all 336 formulas across 11 sheets in `model/itc_model.xlsx` to confirm zero syntax errors, zero incompatible function names, and zero broken links. *(Note: Save the workbook once in desktop Excel with Ctrl+S to pre-cache display values for mobile/web viewers).*
 
 ---
 
@@ -182,7 +187,7 @@ itc-lastmile-project/
 ├── app.py                           # Interactive Streamlit operations dashboard & control tower
 ├── run_decision_support.py          # Daily 07:00 AM dispatch & replenishment CLI runner
 ├── requirements.txt                 # Project dependencies
-├── ITC_LastMile_Project_Report.md   # Comprehensive technical project report (~6,000 words)
+├── ITC_LastMile_Project_Report.md   # Technical project report (~6,000 words)
 ├── ITC_LastMile_Presentation_Deck.md# 15-slide presentation deck
 ├── data/
 │   ├── itc_operations.db            # Embedded SQLite relational database
@@ -195,9 +200,9 @@ itc-lastmile-project/
 │   ├── transport_optimization/      # Weight-cube load optimizer & SciPy sourcing LP solver
 │   └── performance_scorecards/      # Composite OTIF and carrier benchmarking
 ├── model/
-│   ├── generate_sheets.py           # Automated formula-driven Excel generator
-│   ├── verify_formulas.py           # Automated OpenXML formula syntax auditor
-│   └── itc_model.xlsx               # 10-sheet quantitative supply chain model
+│   ├── generate_sheets.py           # Automated formula-driven Excel generator (11 sheets)
+│   ├── verify_formulas.py           # Automated OpenXML formula syntax auditor (336 formulas)
+│   └── itc_model.xlsx               # 11-sheet quantitative supply chain model
 └── tests/
     ├── test_inventory_engine.py     # Unit tests for safety stock and ABC-XYZ
     ├── test_transport_optimization.py# Unit tests for vehicle loading and sourcing LP
@@ -206,13 +211,15 @@ itc-lastmile-project/
 
 ---
 
-## ⚠️ Limitations & Notes for an Interview
+## ⚠️ Notes on Freight Terminology & Limitations
 
-1. **Synthetic Data Calibration:**  
+1. **Freight Terminology:**  
+   In this project, I use standard supply chain nomenclature: **Primary Linehaul Freight** (Factory to RDC), **Secondary Freight** (RDC to Hub/Stockist), and **Tertiary Last-Mile Delivery** (Hub to Retail Outlets). Where K1/K2/K3 is referenced in industry discussions, my understanding is that K1 represents factory-to-warehouse primary linehaul, K2 secondary trunking, and K3 branch/depot distribution.
+2. **Synthetic Data Calibration:**  
    The 1,200 orders and distance matrix are realistic synthetic benchmarks calibrated to public FMCG disclosures and eastern Uttar Pradesh geography. In an actual deployment at ITC, these scripts would connect directly to live SAP ERP / DMS extraction tables.
-2. **Physical Packaging Realities:**  
+3. **Physical Packaging Realities:**  
    The load optimizer uses a dual-constraint mathematical knapsack. In an actual warehouse bay, corrugated box stackability (crush resistance), pallet footprints, and parcel orientation mean achieved utilization is typically 80–88%, which is accounted for in the model.
-3. **Pilot Before Rollout:**  
+4. **Pilot Before Rollout:**  
    A capital investment of ₹430 Cr across 150 hubs should never be committed all at once. The recommended roadmap begins with a single cluster pilot (Azamgarh / Jaunpur / Varanasi) to validate actual retail demand recapture before expanding regionally.
 
 ---

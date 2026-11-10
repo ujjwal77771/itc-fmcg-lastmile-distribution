@@ -270,7 +270,7 @@ At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual gross deman
 - **Cumulative 3-Year Incremental Revenue:** **₹2,806.5 Cr**
 - **Annual Incremental Revenue at Maturity (Year 3):** **₹1,325.9 Cr**
 - **Net Present Value (NPV @ 12% WACC):** **₹379.9 Cr**
-- **Modeled Simple Payback Period:** **15.1 Months** (matches workbook formula)
+- **Cumulative Cash Flow Payback:** **17.5 Months (1.46 Years)** (exact break-even across phased cumulative cash flows)
 - **Modeled IRR:** **~114%**
 
 *Methodological Note: Financial outputs are scenario model projections, not historical findings. They depend directly on base-case working hypotheses of 50% demand recapture and 800 new outlets per hub at ~5 cases/month, which represent planning targets to be tested during district pilot trials.*

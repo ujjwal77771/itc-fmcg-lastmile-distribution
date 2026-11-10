@@ -1,8 +1,14 @@
 """
 Formula Integrity, Cross-Sheet Reference & Syntax Verification
 Author: Ujjwal Deep | B.Tech Mechanical Engineering, BIT Mesra
-Verifies that all formulas in model/itc_model.xlsx have valid syntax, zero broken references,
-and compatible Excel functions (e.g. NORMSDIST instead of un-prefixed NORM.S.DIST).
+
+Verifies that all formulas in model/itc_model.xlsx have valid OpenXML syntax,
+zero broken sheet references, and compatible Excel functions (e.g. NORMSDIST instead of un-prefixed NORM.S.DIST).
+
+Note on Calculated Display Values:
+Openpyxl writes dynamic formula strings into the spreadsheet. When opened in desktop Microsoft Excel
+and saved (Ctrl+S), Excel's calculation engine evaluates and writes the cached display values (<v> tags)
+used by mobile viewers and web previews.
 """
 
 import os
@@ -57,7 +63,7 @@ for sname in sheet_names:
                     if ref_sheet not in sheet_names:
                         errors.append((sname, r, c, f_str, f"Referenced sheet '{ref_sheet}' does not exist"))
 
-print(f"Total formulas verified: {total_formulas}")
+print(f"Total dynamic formulas verified: {total_formulas}")
 if errors:
     print(f"FAILED: Found {len(errors)} formula / reference errors:")
     for err in errors:
@@ -65,3 +71,4 @@ if errors:
     exit(1)
 else:
     print("SUCCESS: Zero syntax errors, zero incompatible function names, and zero broken sheet references!")
+    print("Operational Reminder: Save workbook once in desktop Excel (Ctrl+S) to pre-cache display values for mobile viewers.")

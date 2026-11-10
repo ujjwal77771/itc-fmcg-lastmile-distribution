@@ -437,7 +437,7 @@ A critical finding of the activity-based cost build (`Delivered_Cost_Build`) is 
 
 ### 3-Year DCF Valuation & Base-Case Scenario Projections
 
-> ⚠️ **Methodological Note on Returns:** The valuation outputs below (NPV ₹379.9 Cr, Payback 15.1 months, IRR ~114%) represent **indicative base-case scenario projections of the financial model**, rather than empirical findings. They depend directly on two central working hypotheses: (1) a 50% demand recapture rate on prevented store out-of-stock events, and (2) adding 800 new direct retail outlets per district hub averaging ~5 cases/month (~65 cases/year). Because these assumptions are sensitive to local competitor substitution and route dynamics, they must be treated as pilot test hypotheses to be calibrated against actual field audit data before full capital commitment.
+> ⚠️ **Methodological Note on Returns:** The valuation outputs below (NPV ₹379.9 Cr, Cumulative Payback 17.5 months, IRR ~114%) represent **indicative base-case scenario projections of the financial model**, rather than empirical findings. They depend directly on two central working hypotheses: (1) a 50% demand recapture rate on prevented store out-of-stock events, and (2) adding 800 new direct retail outlets per district hub averaging ~5 cases/month (~65 cases/year). Because these assumptions are sensitive to local competitor substitution and route dynamics, they must be treated as pilot test hypotheses to be calibrated against actual field audit data before full capital commitment.
 
 Financial projections in `model/itc_model.xlsx` evaluate cash flows over a 3-year horizon:
 
@@ -446,7 +446,7 @@ Financial projections in `model/itc_model.xlsx` evaluate cash flows over a 3-yea
 * **Gross Margin:** **38.0%** (working assumption based on ITC FMCG segment gross profitability).
 * **Cost of Capital (WACC):** **12.0%** (working assumption reflecting FMCG corporate hurdle rate).
 * **Net Present Value (NPV @ 12%):** **₹379.9 Crores**.
-* **Simple Payback Period:** **15.1 Months** (matches model formula `=ABS(B33)/(C23-C28)*12`).
+* **Cumulative Cash Flow Payback Period:** **17.5 Months (1.46 Years)** (matches model formula `=12+(ABS(C34)/D33)*12`). Reflects Year 1 pilot cash flow deficit (-₹48.8 Cr) and cumulative break-even achieved 5.5 months into Year 2.
 * **Internal Rate of Return (IRR):** Modeled at ~114%, driven by high operating leverage on low fixed assets. *(Presented as an illustrative scenario output under full outlet execution, not as a core operational finding).*
 
 ---
