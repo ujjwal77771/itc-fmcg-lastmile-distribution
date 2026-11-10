@@ -1,0 +1,301 @@
+dispatch_id,dispatch_date,origin_node,destination_node,vehicle_type,distance_km,cases_dense_atta,cases_bulky_bingo,total_cases,actual_payload_kg,payload_capacity_kg,weight_utilization_pct,actual_cube_cbm,cube_capacity_cbm,cube_utilization_pct,transit_cost_inr,freight_cost_per_case_inr
+DISP-2026001,2026-09-21,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,55,32,87,1022.7,1250.0,81.8,4.71,4.8,98.2,5040.0,57.93
+DISP-2026002,2026-09-30,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,63,35,98,1165.5,1250.0,93.2,5.26,4.8,109.7,5040.0,51.43
+DISP-2026003,2026-10-14,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,449,243,692,8283.3,9000.0,92.0,36.99,32.0,115.6,3780.0,5.46
+DISP-2026004,2026-08-03,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,351,307,658,6896.7,9000.0,76.6,38.51,32.0,120.3,3780.0,5.74
+DISP-2026005,2026-08-30,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,370,252,622,7012.2,9000.0,77.9,34.72,32.0,108.5,5460.0,8.78
+DISP-2026006,2026-10-15,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,438,268,706,8191.8,9000.0,91.0,38.62,32.0,120.7,8820.0,12.49
+DISP-2026007,2026-09-28,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,60,39,99,1130.4,1250.0,90.4,5.48,4.8,114.1,2340.0,23.64
+DISP-2026008,2026-10-01,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,400,274,674,7586.4,9000.0,84.3,37.67,32.0,117.7,11760.0,17.45
+DISP-2026009,2026-10-03,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,49,43,92,963.3,1250.0,77.1,5.39,4.8,112.2,2088.0,22.7
+DISP-2026010,2026-08-07,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,51,42,93,992.7,1250.0,79.4,5.38,4.8,112.1,2592.0,27.87
+DISP-2026011,2026-08-04,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,58,42,100,1108.2,1250.0,88.7,5.65,4.8,117.7,1152.0,11.52
+DISP-2026012,2026-08-09,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,479,303,782,8994.3,9000.0,99.9,43.05,32.0,134.5,3780.0,4.83
+DISP-2026013,2026-09-29,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,52,39,91,998.4,1250.0,79.9,5.17,4.8,107.8,1152.0,12.66
+DISP-2026014,2026-09-04,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,399,223,622,7386.3,9000.0,82.1,33.45,32.0,104.5,6048.0,9.72
+DISP-2026015,2026-08-02,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,403,223,626,7452.3,9000.0,82.8,33.6,32.0,105.0,8820.0,14.09
+DISP-2026016,2026-09-23,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,62,36,98,1152.6,1250.0,92.2,5.31,4.8,110.6,5040.0,51.43
+DISP-2026017,2026-09-03,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,363,267,630,6950.7,9000.0,77.2,35.69,32.0,111.5,8820.0,14.0
+DISP-2026018,2026-08-15,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,389,304,693,7512.9,9000.0,83.5,39.71,32.0,124.1,8820.0,12.73
+DISP-2026019,2026-10-19,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,59,37,96,1106.7,1250.0,88.5,5.28,4.8,109.9,2340.0,24.38
+DISP-2026020,2026-09-10,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,57,25,82,1030.5,1250.0,82.4,4.22,4.8,87.8,5040.0,61.46
+DISP-2026021,2026-10-28,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,45,36,81,872.1,1250.0,69.8,4.66,4.8,97.1,2592.0,32.0
+DISP-2026022,2026-08-08,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,430,227,657,7912.2,9000.0,87.9,34.95,32.0,109.2,11760.0,17.9
+DISP-2026023,2026-09-04,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,49,34,83,930.9,1250.0,74.5,4.65,4.8,96.9,2592.0,31.23
+DISP-2026024,2026-09-10,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,421,231,652,7778.1,9000.0,86.4,34.94,32.0,109.2,11760.0,18.04
+DISP-2026025,2026-09-03,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,49,27,76,905.7,1250.0,72.5,4.08,4.8,84.9,4140.0,54.47
+DISP-2026026,2026-09-13,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,384,284,668,7358.4,9000.0,81.8,37.88,32.0,118.4,8820.0,13.2
+DISP-2026027,2026-09-16,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,350,224,574,6581.4,9000.0,73.1,31.67,32.0,99.0,4872.0,8.49
+DISP-2026028,2026-10-29,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,58,31,89,1068.6,1250.0,85.5,4.75,4.8,98.9,5040.0,56.63
+DISP-2026029,2026-08-27,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,59,34,93,1095.9,1250.0,87.7,5.03,4.8,104.8,5040.0,54.19
+DISP-2026030,2026-10-16,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,51,41,92,989.1,1250.0,79.1,5.3,4.8,110.4,5040.0,54.78
+DISP-2026031,2026-09-21,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,48,29,77,896.4,1250.0,71.7,4.2,4.8,87.5,4140.0,53.77
+DISP-2026032,2026-08-23,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,59,35,94,1099.5,1250.0,88.0,5.11,4.8,106.5,1620.0,17.23
+DISP-2026033,2026-08-29,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,420,278,698,7930.8,9000.0,88.1,38.76,32.0,121.1,3780.0,5.42
+DISP-2026034,2026-10-25,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,394,281,675,7512.6,9000.0,83.5,38.01,32.0,118.8,5460.0,8.09
+DISP-2026035,2026-09-26,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,56,36,92,1053.6,1250.0,84.3,5.08,4.8,105.8,3780.0,41.09
+DISP-2026036,2026-10-23,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,424,308,732,8104.8,9000.0,90.1,41.37,32.0,129.3,8820.0,12.05
+DISP-2026037,2026-10-01,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,64,37,101,1189.2,1250.0,95.1,5.47,4.8,113.9,2592.0,25.66
+DISP-2026038,2026-08-03,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,52,33,85,976.8,1250.0,78.1,4.68,4.8,97.5,3780.0,44.47
+DISP-2026039,2026-10-01,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,63,34,97,1161.9,1250.0,93.0,5.18,4.8,108.0,2592.0,26.72
+DISP-2026040,2026-09-13,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,408,251,659,7635.6,9000.0,84.8,36.09,32.0,112.8,11760.0,17.85
+DISP-2026041,2026-10-27,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,61,41,102,1154.1,1250.0,92.3,5.68,4.8,118.3,1152.0,11.29
+DISP-2026042,2026-09-27,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,388,221,609,7197.6,9000.0,80.0,32.87,32.0,102.7,2688.0,4.41
+DISP-2026043,2026-08-03,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,61,41,102,1154.1,1250.0,92.3,5.68,4.8,118.3,1620.0,15.88
+DISP-2026044,2026-09-28,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,46,29,75,863.4,1250.0,69.1,4.13,4.8,86.0,2340.0,31.2
+DISP-2026045,2026-08-01,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,46,36,82,888.6,1250.0,71.1,4.7,4.8,97.9,3780.0,46.1
+DISP-2026046,2026-10-29,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,417,274,691,7866.9,9000.0,87.4,38.31,32.0,119.7,8820.0,12.76
+DISP-2026047,2026-10-14,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,387,243,630,7260.3,9000.0,80.7,34.63,32.0,108.2,4872.0,7.73
+DISP-2026048,2026-10-08,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,446,292,738,8410.2,9000.0,93.4,40.89,32.0,127.8,5460.0,7.4
+DISP-2026049,2026-09-28,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,442,222,664,8092.2,9000.0,89.9,35.0,32.0,109.4,9660.0,14.55
+DISP-2026050,2026-08-20,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,439,286,725,8273.1,9000.0,91.9,40.13,32.0,125.4,4872.0,6.72
+DISP-2026051,2026-08-19,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,401,252,653,7523.7,9000.0,83.6,35.9,32.0,112.2,9660.0,14.79
+DISP-2026052,2026-09-09,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,431,220,651,7903.5,9000.0,87.8,34.42,32.0,107.6,11760.0,18.06
+DISP-2026053,2026-08-11,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,391,226,617,7265.1,9000.0,80.7,33.39,32.0,104.3,6048.0,9.8
+DISP-2026054,2026-08-16,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,409,221,630,7544.1,9000.0,83.8,33.66,32.0,105.2,9660.0,15.33
+DISP-2026055,2026-08-01,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,386,251,637,7272.6,9000.0,80.8,35.25,32.0,110.2,8820.0,13.85
+DISP-2026056,2026-08-09,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,63,40,103,1183.5,1250.0,94.7,5.67,4.8,118.2,2088.0,20.27
+DISP-2026057,2026-10-19,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,45,44,89,900.9,1250.0,72.1,5.32,4.8,110.8,1152.0,12.94
+DISP-2026058,2026-10-14,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,48,30,78,900.0,1250.0,72.0,4.28,4.8,89.2,4140.0,53.08
+DISP-2026059,2026-10-23,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,461,308,769,8715.3,9000.0,96.8,42.77,32.0,133.7,4872.0,6.34
+DISP-2026060,2026-08-25,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,58,42,100,1108.2,1250.0,88.7,5.65,4.8,117.7,2340.0,23.4
+DISP-2026061,2026-10-05,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,417,252,669,7787.7,9000.0,86.5,36.51,32.0,114.1,4872.0,7.28
+DISP-2026062,2026-08-14,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,64,32,96,1171.2,1250.0,93.7,5.06,4.8,105.3,4140.0,43.12
+DISP-2026063,2026-08-07,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,45,40,85,886.5,1250.0,70.9,4.99,4.8,104.0,2592.0,30.49
+DISP-2026064,2026-10-15,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,58,30,88,1065.0,1250.0,85.2,4.66,4.8,97.2,2088.0,23.73
+DISP-2026065,2026-09-20,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,376,246,622,7089.6,9000.0,78.8,34.46,32.0,107.7,9660.0,15.53
+DISP-2026066,2026-08-21,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,377,283,660,7239.3,9000.0,80.4,37.53,32.0,117.3,6048.0,9.16
+DISP-2026067,2026-10-08,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,397,238,635,7407.3,9000.0,82.3,34.6,32.0,108.1,3780.0,5.95
+DISP-2026068,2026-08-04,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,61,41,102,1154.1,1250.0,92.3,5.68,4.8,118.3,4140.0,40.59
+DISP-2026069,2026-09-13,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,395,225,620,7327.5,9000.0,81.4,33.46,32.0,104.6,8820.0,14.23
+DISP-2026070,2026-09-06,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,395,272,667,7496.7,9000.0,83.3,37.31,32.0,116.6,3780.0,5.67
+DISP-2026071,2026-09-29,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,45,27,72,839.7,1250.0,67.2,3.92,4.8,81.8,1152.0,16.0
+DISP-2026072,2026-08-18,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,47,32,79,890.7,1250.0,71.3,4.41,4.8,91.9,2340.0,29.62
+DISP-2026073,2026-09-15,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,381,266,647,7244.1,9000.0,80.5,36.29,32.0,113.4,5460.0,8.44
+DISP-2026074,2026-10-25,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,54,26,80,984.6,1250.0,78.8,4.18,4.8,87.2,2340.0,29.25
+DISP-2026075,2026-10-29,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,45,33,78,861.3,1250.0,68.9,4.42,4.8,92.0,4140.0,53.08
+DISP-2026076,2026-09-12,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,388,261,649,7341.6,9000.0,81.6,36.15,32.0,113.0,9660.0,14.88
+DISP-2026077,2026-08-26,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,57,31,88,1052.1,1250.0,84.2,4.71,4.8,98.1,2340.0,26.59
+DISP-2026078,2026-09-26,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,369,284,653,7110.9,9000.0,79.0,37.31,32.0,116.6,3780.0,5.79
+DISP-2026079,2026-08-08,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,464,306,770,8757.6,9000.0,97.3,42.72,32.0,133.5,8820.0,11.45
+DISP-2026080,2026-08-15,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,415,251,666,7751.1,9000.0,86.1,36.35,32.0,113.6,5460.0,8.2
+DISP-2026081,2026-10-26,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,63,41,104,1187.1,1250.0,95.0,5.76,4.8,119.9,3780.0,36.35
+DISP-2026082,2026-09-21,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,364,273,637,6988.8,9000.0,77.7,36.22,32.0,113.2,8820.0,13.85
+DISP-2026083,2026-09-29,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,52,36,88,987.6,1250.0,79.0,4.93,4.8,102.7,2592.0,29.45
+DISP-2026084,2026-08-05,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,50,37,87,958.2,1250.0,76.7,4.93,4.8,102.8,1152.0,13.24
+DISP-2026085,2026-09-16,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,52,44,96,1016.4,1250.0,81.3,5.58,4.8,116.3,5040.0,52.5
+DISP-2026086,2026-08-16,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,54,43,97,1045.8,1250.0,83.7,5.58,4.8,116.2,2340.0,24.12
+DISP-2026087,2026-08-17,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,368,277,645,7069.2,9000.0,78.5,36.7,32.0,114.7,11760.0,18.23
+DISP-2026088,2026-09-24,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,466,281,747,8700.6,9000.0,96.7,40.75,32.0,127.3,3780.0,5.06
+DISP-2026089,2026-08-23,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,56,25,81,1014.0,1250.0,81.1,4.18,4.8,87.0,2592.0,32.0
+DISP-2026090,2026-09-27,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,383,267,650,7280.7,9000.0,80.9,36.45,32.0,113.9,6048.0,9.3
+DISP-2026091,2026-10-28,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,466,220,686,8481.0,9000.0,94.2,35.75,32.0,111.7,3780.0,5.51
+DISP-2026092,2026-08-16,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,49,27,76,905.7,1250.0,72.5,4.08,4.8,84.9,5040.0,66.32
+DISP-2026093,2026-10-15,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,435,276,711,8171.1,9000.0,90.8,39.16,32.0,122.4,9660.0,13.59
+DISP-2026094,2026-08-29,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,418,266,684,7854.6,9000.0,87.3,37.7,32.0,117.8,2688.0,3.93
+DISP-2026095,2026-10-01,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,434,258,692,8089.8,9000.0,89.9,37.65,32.0,117.7,3780.0,5.46
+DISP-2026096,2026-09-02,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,450,242,692,8296.2,9000.0,92.2,36.94,32.0,115.5,8820.0,12.75
+DISP-2026097,2026-08-10,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,449,253,702,8319.3,9000.0,92.4,37.81,32.0,118.2,3780.0,5.38
+DISP-2026098,2026-09-21,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,63,25,88,1129.5,1250.0,90.4,4.44,4.8,92.6,2340.0,26.59
+DISP-2026099,2026-10-08,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,60,40,100,1134.0,1250.0,90.7,5.56,4.8,115.8,1152.0,11.52
+DISP-2026100,2026-08-02,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,64,36,100,1185.6,1250.0,94.8,5.38,4.8,112.2,1152.0,11.52
+DISP-2026101,2026-09-19,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,45,25,70,832.5,1250.0,66.6,3.76,4.8,78.3,1152.0,16.46
+DISP-2026102,2026-09-30,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,49,36,85,938.1,1250.0,75.0,4.81,4.8,100.3,2088.0,24.56
+DISP-2026103,2026-10-06,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,52,34,86,980.4,1250.0,78.4,4.76,4.8,99.2,2592.0,30.14
+DISP-2026104,2026-09-12,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,361,265,626,6910.5,9000.0,76.8,35.45,32.0,110.8,3780.0,6.04
+DISP-2026105,2026-08-02,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,62,27,89,1120.2,1250.0,89.6,4.57,4.8,95.2,2088.0,23.46
+DISP-2026106,2026-10-26,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,52,34,86,980.4,1250.0,78.4,4.76,4.8,99.2,2340.0,27.21
+DISP-2026107,2026-10-29,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,464,226,690,8469.6,9000.0,94.1,36.16,32.0,113.0,5460.0,7.91
+DISP-2026108,2026-10-07,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,463,294,757,8697.9,9000.0,96.6,41.7,32.0,130.3,3780.0,4.99
+DISP-2026109,2026-08-29,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,370,255,625,7023.0,9000.0,78.0,34.97,32.0,109.3,2688.0,4.3
+DISP-2026110,2026-08-10,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,47,41,88,923.1,1250.0,73.8,5.15,4.8,107.2,2592.0,29.45
+DISP-2026111,2026-09-05,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,445,243,688,8217.3,9000.0,91.3,36.84,32.0,115.1,6048.0,8.79
+DISP-2026112,2026-08-23,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,386,231,617,7200.6,9000.0,80.0,33.61,32.0,105.0,9660.0,15.66
+DISP-2026113,2026-09-24,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,47,33,80,894.3,1250.0,71.5,4.49,4.8,93.6,5040.0,63.0
+DISP-2026114,2026-08-30,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,64,40,104,1200.0,1250.0,96.0,5.71,4.8,119.0,2592.0,24.92
+DISP-2026115,2026-10-28,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,368,268,636,7036.8,9000.0,78.2,35.96,32.0,112.4,3780.0,5.94
+DISP-2026116,2026-08-12,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,63,36,99,1169.1,1250.0,93.5,5.35,4.8,111.4,2592.0,26.18
+DISP-2026117,2026-08-09,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,58,44,102,1115.4,1250.0,89.2,5.81,4.8,121.1,1152.0,11.29
+DISP-2026118,2026-10-22,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,466,288,754,8725.8,9000.0,97.0,41.32,32.0,129.1,11760.0,15.6
+DISP-2026119,2026-08-12,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,48,40,88,936.0,1250.0,74.9,5.1,4.8,106.3,1152.0,13.09
+DISP-2026120,2026-09-26,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,54,31,85,1002.6,1250.0,80.2,4.59,4.8,95.7,1620.0,19.06
+DISP-2026121,2026-08-14,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,49,27,76,905.7,1250.0,72.5,4.08,4.8,84.9,2340.0,30.79
+DISP-2026122,2026-10-26,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,55,42,97,1058.7,1250.0,84.7,5.53,4.8,115.3,2088.0,21.53
+DISP-2026123,2026-10-15,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,56,41,97,1071.6,1250.0,85.7,5.49,4.8,114.4,2340.0,24.12
+DISP-2026124,2026-08-07,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,376,285,661,7230.0,9000.0,80.3,37.66,32.0,117.7,3780.0,5.72
+DISP-2026125,2026-08-05,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,50,43,93,979.8,1250.0,78.4,5.43,4.8,113.0,1620.0,17.42
+DISP-2026126,2026-08-08,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,414,305,719,7929.0,9000.0,88.1,40.74,32.0,127.3,3780.0,5.26
+DISP-2026127,2026-08-17,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,57,28,85,1041.3,1250.0,83.3,4.46,4.8,93.0,5040.0,59.29
+DISP-2026128,2026-09-05,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,368,280,648,7080.0,9000.0,78.7,36.94,32.0,115.5,2688.0,4.15
+DISP-2026129,2026-09-23,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,54,43,97,1045.8,1250.0,83.7,5.58,4.8,116.2,2088.0,21.53
+DISP-2026130,2026-09-08,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,475,277,752,8834.7,9000.0,98.2,40.76,32.0,127.4,4872.0,6.48
+DISP-2026131,2026-08-20,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,410,258,668,7693.8,9000.0,85.5,36.74,32.0,114.8,9660.0,14.46
+DISP-2026132,2026-08-01,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,61,25,86,1096.5,1250.0,87.7,4.37,4.8,91.0,1620.0,18.84
+DISP-2026133,2026-09-07,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,56,37,93,1057.2,1250.0,84.6,5.16,4.8,107.5,3780.0,40.65
+DISP-2026134,2026-09-01,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,59,40,99,1117.5,1250.0,89.4,5.52,4.8,115.0,1620.0,16.36
+DISP-2026135,2026-10-24,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,49,28,77,909.3,1250.0,72.7,4.16,4.8,86.6,1152.0,14.96
+DISP-2026136,2026-08-19,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,396,268,664,7498.8,9000.0,83.3,37.02,32.0,115.7,6048.0,9.11
+DISP-2026137,2026-08-14,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,45,27,72,839.7,1250.0,67.2,3.92,4.8,81.8,5040.0,70.0
+DISP-2026138,2026-08-16,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,55,36,91,1037.1,1250.0,83.0,5.04,4.8,105.0,2592.0,28.48
+DISP-2026139,2026-10-13,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,451,295,746,8503.5,9000.0,94.5,41.33,32.0,129.2,9660.0,12.95
+DISP-2026140,2026-08-24,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,357,255,612,6808.5,9000.0,75.6,34.48,32.0,107.7,3780.0,6.18
+DISP-2026141,2026-10-29,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,409,269,678,7716.9,9000.0,85.7,37.6,32.0,117.5,5460.0,8.05
+DISP-2026142,2026-08-28,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,390,283,673,7453.8,9000.0,82.8,38.03,32.0,118.8,3780.0,5.62
+DISP-2026143,2026-08-27,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,395,254,649,7431.9,9000.0,82.6,35.84,32.0,112.0,11760.0,18.12
+DISP-2026144,2026-08-06,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,396,244,640,7412.4,9000.0,82.4,35.06,32.0,109.5,4872.0,7.61
+DISP-2026145,2026-10-05,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,379,224,603,7059.9,9000.0,78.4,32.77,32.0,102.4,9660.0,16.02
+DISP-2026146,2026-09-02,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,360,304,664,7034.4,9000.0,78.2,38.61,32.0,120.7,6048.0,9.11
+DISP-2026147,2026-08-26,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,61,37,98,1139.7,1250.0,91.2,5.35,4.8,111.5,2592.0,26.45
+DISP-2026148,2026-09-02,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,448,220,668,8184.0,9000.0,90.9,35.06,32.0,109.6,6048.0,9.05
+DISP-2026149,2026-08-21,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,355,300,655,6937.5,9000.0,77.1,38.09,32.0,119.0,11760.0,17.95
+DISP-2026150,2026-10-08,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,50,27,77,922.2,1250.0,73.8,4.11,4.8,85.7,1620.0,21.04
+DISP-2026151,2026-09-22,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,49,34,83,930.9,1250.0,74.5,4.65,4.8,96.9,1620.0,19.52
+DISP-2026152,2026-10-13,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,58,33,91,1075.8,1250.0,86.1,4.91,4.8,102.3,2592.0,28.48
+DISP-2026153,2026-08-01,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,57,28,85,1041.3,1250.0,83.3,4.46,4.8,93.0,1620.0,19.06
+DISP-2026154,2026-10-01,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,52,26,78,951.6,1250.0,76.1,4.11,4.8,85.6,2592.0,33.23
+DISP-2026155,2026-10-11,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,46,27,73,856.2,1250.0,68.5,3.96,4.8,82.5,2340.0,32.05
+DISP-2026156,2026-09-19,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,403,224,627,7455.9,9000.0,82.8,33.68,32.0,105.3,6048.0,9.65
+DISP-2026157,2026-09-26,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,59,39,98,1113.9,1250.0,89.1,5.44,4.8,113.3,4140.0,42.24
+DISP-2026158,2026-10-24,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,424,270,694,7968.0,9000.0,88.5,38.25,32.0,119.5,5460.0,7.87
+DISP-2026159,2026-09-07,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,387,269,656,7353.9,9000.0,81.7,36.76,32.0,114.9,2688.0,4.1
+DISP-2026160,2026-10-21,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,440,270,710,8232.0,9000.0,91.5,38.86,32.0,121.4,11760.0,16.56
+DISP-2026161,2026-10-02,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,428,249,677,7958.4,9000.0,88.4,36.68,32.0,114.6,2688.0,3.97
+DISP-2026162,2026-09-20,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,48,34,82,914.4,1250.0,73.2,4.61,4.8,96.1,1620.0,19.76
+DISP-2026163,2026-09-25,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,61,44,105,1164.9,1250.0,93.2,5.93,4.8,123.5,2340.0,22.29
+DISP-2026164,2026-10-27,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,50,26,76,918.6,1250.0,73.5,4.03,4.8,84.0,2340.0,30.79
+DISP-2026165,2026-10-16,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,392,294,686,7526.4,9000.0,83.6,39.0,32.0,121.9,4872.0,7.1
+DISP-2026166,2026-08-23,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,55,40,95,1051.5,1250.0,84.1,5.37,4.8,111.9,4140.0,43.58
+DISP-2026167,2026-08-08,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,374,286,660,7200.6,9000.0,80.0,37.66,32.0,117.7,9660.0,14.64
+DISP-2026168,2026-10-06,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,62,43,105,1177.8,1250.0,94.2,5.88,4.8,122.5,1620.0,15.43
+DISP-2026169,2026-08-19,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,62,34,96,1145.4,1250.0,91.6,5.14,4.8,107.2,1620.0,16.88
+DISP-2026170,2026-09-30,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,419,220,639,7705.5,9000.0,85.6,33.96,32.0,106.1,3780.0,5.92
+DISP-2026171,2026-08-05,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,58,26,84,1050.6,1250.0,84.0,4.34,4.8,90.3,1152.0,13.71
+DISP-2026172,2026-09-18,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,394,246,640,7386.6,9000.0,82.1,35.14,32.0,109.8,5460.0,8.53
+DISP-2026173,2026-10-12,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,396,305,701,7632.0,9000.0,84.8,40.06,32.0,125.2,6048.0,8.63
+DISP-2026174,2026-09-25,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,412,267,679,7759.2,9000.0,86.2,37.55,32.0,117.3,4872.0,7.18
+DISP-2026175,2026-09-30,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,48,25,73,882.0,1250.0,70.6,3.87,4.8,80.7,2340.0,32.05
+DISP-2026176,2026-08-08,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,64,39,103,1196.4,1250.0,95.7,5.63,4.8,117.3,2088.0,20.27
+DISP-2026177,2026-09-16,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,58,38,96,1093.8,1250.0,87.5,5.32,4.8,110.8,4140.0,43.12
+DISP-2026178,2026-10-27,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,363,278,641,6990.3,9000.0,77.7,36.59,32.0,114.3,3780.0,5.9
+DISP-2026179,2026-09-25,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,47,39,86,915.9,1250.0,73.3,4.98,4.8,103.8,5040.0,58.6
+DISP-2026180,2026-08-23,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,367,257,624,6980.7,9000.0,77.6,35.02,32.0,109.4,4872.0,7.81
+DISP-2026181,2026-08-15,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,468,247,715,8611.2,9000.0,95.7,38.04,32.0,118.9,6048.0,8.46
+DISP-2026182,2026-10-13,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,61,31,92,1118.1,1250.0,89.4,4.86,4.8,101.3,2592.0,28.17
+DISP-2026183,2026-10-25,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,393,244,637,7362.9,9000.0,81.8,34.94,32.0,109.2,8820.0,13.85
+DISP-2026184,2026-08-17,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,48,34,82,914.4,1250.0,73.2,4.61,4.8,96.1,1152.0,14.05
+DISP-2026185,2026-10-06,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,62,39,101,1163.4,1250.0,93.1,5.55,4.8,115.7,1620.0,16.04
+DISP-2026186,2026-10-25,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,357,259,616,6822.9,9000.0,75.8,34.8,32.0,108.8,11760.0,19.09
+DISP-2026187,2026-10-22,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,450,225,675,8235.0,9000.0,91.5,35.55,32.0,111.1,6048.0,8.96
+DISP-2026188,2026-09-21,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,408,289,697,7772.4,9000.0,86.4,39.2,32.0,122.5,9660.0,13.86
+DISP-2026189,2026-09-02,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,50,30,80,933.0,1250.0,74.6,4.36,4.8,90.8,3780.0,47.25
+DISP-2026190,2026-08-04,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,411,243,654,7656.3,9000.0,85.1,35.54,32.0,111.1,4872.0,7.45
+DISP-2026191,2026-09-24,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,47,43,90,930.3,1250.0,74.4,5.31,4.8,110.7,5040.0,56.0
+DISP-2026192,2026-08-31,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,385,243,628,7227.3,9000.0,80.3,34.56,32.0,108.0,3780.0,6.02
+DISP-2026193,2026-08-06,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,424,223,647,7798.8,9000.0,86.7,34.4,32.0,107.5,2688.0,4.15
+DISP-2026194,2026-10-18,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,462,270,732,8595.0,9000.0,95.5,39.7,32.0,124.0,8820.0,12.05
+DISP-2026195,2026-10-01,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,59,35,94,1099.5,1250.0,88.0,5.11,4.8,106.5,2340.0,24.89
+DISP-2026196,2026-08-08,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,393,224,617,7290.9,9000.0,81.0,33.3,32.0,104.1,4872.0,7.9
+DISP-2026197,2026-10-09,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,417,238,655,7737.3,9000.0,86.0,35.36,32.0,110.5,8820.0,13.47
+DISP-2026198,2026-10-23,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,61,36,97,1136.1,1250.0,90.9,5.27,4.8,109.8,1152.0,11.88
+DISP-2026199,2026-09-16,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,58,30,88,1065.0,1250.0,85.2,4.66,4.8,97.2,2340.0,26.59
+DISP-2026200,2026-09-06,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,449,296,745,8474.1,9000.0,94.2,41.33,32.0,129.2,4872.0,6.54
+DISP-2026201,2026-08-03,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,62,34,96,1145.4,1250.0,91.6,5.14,4.8,107.2,3780.0,39.38
+DISP-2026202,2026-08-05,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,56,26,82,1017.6,1250.0,81.4,4.26,4.8,88.8,2340.0,28.54
+DISP-2026203,2026-08-13,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,433,284,717,8166.9,9000.0,90.7,39.74,32.0,124.2,5460.0,7.62
+DISP-2026204,2026-10-02,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,61,33,94,1125.3,1250.0,90.0,5.02,4.8,104.7,2592.0,27.57
+DISP-2026205,2026-10-14,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,50,27,77,922.2,1250.0,73.8,4.11,4.8,85.7,4140.0,53.77
+DISP-2026206,2026-09-18,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,56,42,98,1075.2,1250.0,86.0,5.57,4.8,116.1,3780.0,38.57
+DISP-2026207,2026-10-17,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,55,33,88,1026.3,1250.0,82.1,4.8,4.8,99.9,4140.0,47.05
+DISP-2026208,2026-09-03,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,384,220,604,7128.0,9000.0,79.2,32.63,32.0,102.0,4872.0,8.07
+DISP-2026209,2026-09-09,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,409,283,692,7767.3,9000.0,86.3,38.75,32.0,121.1,8820.0,12.75
+DISP-2026210,2026-10-11,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,49,38,87,945.3,1250.0,75.6,4.98,4.8,103.7,2592.0,29.79
+DISP-2026211,2026-09-29,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,354,302,656,6928.2,9000.0,77.0,38.22,32.0,119.4,4872.0,7.43
+DISP-2026212,2026-10-17,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,438,261,699,8166.6,9000.0,90.7,38.05,32.0,118.9,8820.0,12.62
+DISP-2026213,2026-10-28,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,421,258,679,7875.3,9000.0,87.5,37.15,32.0,116.1,9660.0,14.23
+DISP-2026214,2026-08-14,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,474,257,731,8746.2,9000.0,97.2,39.09,32.0,122.1,4872.0,6.66
+DISP-2026215,2026-08-23,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,45,41,86,890.1,1250.0,71.2,5.07,4.8,105.7,5040.0,58.6
+DISP-2026216,2026-10-05,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,453,270,723,8446.5,9000.0,93.8,39.35,32.0,123.0,3780.0,5.23
+DISP-2026217,2026-09-08,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,50,27,77,922.2,1250.0,73.8,4.11,4.8,85.7,3780.0,49.09
+DISP-2026218,2026-08-07,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,54,44,98,1049.4,1250.0,84.0,5.66,4.8,117.9,4140.0,42.24
+DISP-2026219,2026-08-15,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,45,44,89,900.9,1250.0,72.1,5.32,4.8,110.8,1620.0,18.2
+DISP-2026220,2026-08-27,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,387,276,663,7379.1,9000.0,82.0,37.34,32.0,116.7,3780.0,5.7
+DISP-2026221,2026-08-27,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,48,26,74,885.6,1250.0,70.8,3.96,4.8,82.4,2592.0,35.03
+DISP-2026222,2026-08-10,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,54,25,79,981.0,1250.0,78.5,4.1,4.8,85.5,2088.0,26.43
+DISP-2026223,2026-09-07,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,59,28,87,1074.3,1250.0,85.9,4.54,4.8,94.5,5040.0,57.93
+DISP-2026224,2026-10-27,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,364,248,612,6898.8,9000.0,76.7,34.17,32.0,106.8,9660.0,15.78
+DISP-2026225,2026-08-08,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,59,28,87,1074.3,1250.0,85.9,4.54,4.8,94.5,1620.0,18.62
+DISP-2026226,2026-10-15,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,63,43,106,1194.3,1250.0,95.5,5.92,4.8,123.3,2340.0,22.08
+DISP-2026227,2026-09-05,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,392,246,638,7353.6,9000.0,81.7,35.07,32.0,109.6,5460.0,8.56
+DISP-2026228,2026-10-08,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,423,257,680,7904.7,9000.0,87.8,37.15,32.0,116.1,4872.0,7.16
+DISP-2026229,2026-08-06,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,396,309,705,7646.4,9000.0,85.0,40.39,32.0,126.2,11760.0,16.68
+DISP-2026230,2026-09-15,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,57,32,89,1055.7,1250.0,84.5,4.79,4.8,99.8,1152.0,12.94
+DISP-2026231,2026-10-01,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,460,279,739,8594.4,9000.0,95.5,40.36,32.0,126.1,6048.0,8.18
+DISP-2026232,2026-09-12,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,449,287,736,8441.7,9000.0,93.8,40.6,32.0,126.9,2688.0,3.65
+DISP-2026233,2026-08-05,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,421,250,671,7846.5,9000.0,87.2,36.5,32.0,114.1,3780.0,5.63
+DISP-2026234,2026-08-09,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,378,297,675,7306.2,9000.0,81.2,38.72,32.0,121.0,4872.0,7.22
+DISP-2026235,2026-09-09,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,55,25,80,997.5,1250.0,79.8,4.14,4.8,86.3,3780.0,47.25
+DISP-2026236,2026-09-15,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,58,28,86,1057.8,1250.0,84.6,4.5,4.8,93.8,1620.0,18.84
+DISP-2026237,2026-09-23,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,45,43,88,897.3,1250.0,71.8,5.24,4.8,109.1,2592.0,29.45
+DISP-2026238,2026-09-09,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,59,33,92,1092.3,1250.0,87.4,4.95,4.8,103.1,1620.0,17.61
+DISP-2026239,2026-09-22,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,64,33,97,1174.8,1250.0,94.0,5.14,4.8,107.0,2340.0,24.12
+DISP-2026240,2026-09-04,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,55,30,85,1015.5,1250.0,81.2,4.55,4.8,94.8,1152.0,13.55
+DISP-2026241,2026-08-02,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,46,41,87,906.6,1250.0,72.5,5.11,4.8,106.5,2340.0,26.9
+DISP-2026242,2026-09-12,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,63,31,94,1151.1,1250.0,92.1,4.94,4.8,102.8,1152.0,12.26
+DISP-2026243,2026-09-21,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Eicher 14T (Hub Linehaul / Milk-run),45.0,437,252,689,8117.7,9000.0,90.2,37.27,32.0,116.5,3780.0,5.49
+DISP-2026244,2026-09-18,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,55,42,97,1058.7,1250.0,84.7,5.53,4.8,115.3,5040.0,51.96
+DISP-2026245,2026-10-24,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,61,44,105,1164.9,1250.0,93.2,5.93,4.8,123.5,5040.0,48.0
+DISP-2026246,2026-09-18,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,435,282,717,8192.7,9000.0,91.0,39.65,32.0,123.9,8820.0,12.3
+DISP-2026247,2026-09-30,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,420,220,640,7722.0,9000.0,85.8,34.0,32.0,106.2,6048.0,9.45
+DISP-2026248,2026-08-13,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Eicher 14T (Hub Linehaul / Milk-run),140.0,472,275,747,8778.0,9000.0,97.5,40.49,32.0,126.5,11760.0,15.74
+DISP-2026249,2026-10-22,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,378,268,646,7201.8,9000.0,80.0,36.34,32.0,113.6,9660.0,14.95
+DISP-2026250,2026-09-14,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,60,32,92,1105.2,1250.0,88.4,4.9,4.8,102.2,3780.0,41.09
+DISP-2026251,2026-08-19,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,427,266,693,8003.1,9000.0,88.9,38.04,32.0,118.9,6048.0,8.73
+DISP-2026252,2026-10-05,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,462,257,719,8548.2,9000.0,95.0,38.63,32.0,120.7,2688.0,3.74
+DISP-2026253,2026-09-20,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,45,32,77,857.7,1250.0,68.6,4.33,4.8,90.3,1152.0,14.96
+DISP-2026254,2026-08-29,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,47,34,81,897.9,1250.0,71.8,4.57,4.8,95.3,5040.0,62.22
+DISP-2026255,2026-10-13,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,46,25,71,849.0,1250.0,67.9,3.8,4.8,79.1,3780.0,53.24
+DISP-2026256,2026-10-26,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,62,31,93,1134.6,1250.0,90.8,4.9,4.8,102.0,1152.0,12.39
+DISP-2026257,2026-08-08,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,47,32,79,890.7,1250.0,71.3,4.41,4.8,91.9,2592.0,32.81
+DISP-2026258,2026-09-23,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,49,27,76,905.7,1250.0,72.5,4.08,4.8,84.9,5040.0,66.32
+DISP-2026259,2026-09-20,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,59,32,91,1088.7,1250.0,87.1,4.87,4.8,101.4,1152.0,12.66
+DISP-2026260,2026-09-03,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,58,38,96,1093.8,1250.0,87.5,5.32,4.8,110.8,4140.0,43.12
+DISP-2026261,2026-08-16,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,404,267,671,7627.2,9000.0,84.7,37.25,32.0,116.4,2688.0,4.01
+DISP-2026262,2026-10-21,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,51,25,76,931.5,1250.0,74.5,3.99,4.8,83.1,2340.0,30.79
+DISP-2026263,2026-08-23,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,60,43,103,1144.8,1250.0,91.6,5.81,4.8,121.0,2088.0,20.27
+DISP-2026264,2026-09-05,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Tata Ace 1.25T (Last-Mile Feeder),32.0,62,26,88,1116.6,1250.0,89.3,4.49,4.8,93.5,1152.0,13.09
+DISP-2026265,2026-08-01,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,64,35,99,1182.0,1250.0,94.6,5.3,4.8,110.5,1620.0,16.36
+DISP-2026266,2026-08-02,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,56,44,100,1082.4,1250.0,86.6,5.74,4.8,119.5,5040.0,50.4
+DISP-2026267,2026-08-05,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,53,26,79,968.1,1250.0,77.4,4.15,4.8,86.4,3780.0,47.85
+DISP-2026268,2026-09-22,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,435,243,678,8052.3,9000.0,89.5,36.46,32.0,113.9,4872.0,7.19
+DISP-2026269,2026-10-20,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,469,278,747,8739.3,9000.0,97.1,40.62,32.0,126.9,8820.0,11.81
+DISP-2026270,2026-10-26,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,463,300,763,8719.5,9000.0,96.9,42.19,32.0,131.9,9660.0,12.66
+DISP-2026271,2026-08-14,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,46,37,83,892.2,1250.0,71.4,4.78,4.8,99.6,4140.0,49.88
+DISP-2026272,2026-08-25,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,55,38,93,1044.3,1250.0,83.5,5.21,4.8,108.5,2592.0,27.87
+DISP-2026273,2026-08-04,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,378,306,684,7338.6,9000.0,81.5,39.46,32.0,123.3,5460.0,7.98
+DISP-2026274,2026-09-06,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,62,34,96,1145.4,1250.0,91.6,5.14,4.8,107.2,3780.0,39.38
+DISP-2026275,2026-09-10,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,366,256,622,6960.6,9000.0,77.3,34.9,32.0,109.1,5460.0,8.78
+DISP-2026276,2026-08-25,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,425,306,731,8114.1,9000.0,90.2,41.24,32.0,128.9,5460.0,7.47
+DISP-2026277,2026-10-25,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Tata Ace 1.25T (Last-Mile Feeder),58.0,50,32,82,940.2,1250.0,75.2,4.52,4.8,94.2,2088.0,25.46
+DISP-2026278,2026-08-12,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,51,34,85,963.9,1250.0,77.1,4.73,4.8,98.5,2592.0,30.49
+DISP-2026279,2026-09-14,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,58,26,84,1050.6,1250.0,84.0,4.34,4.8,90.3,2340.0,27.86
+DISP-2026280,2026-09-23,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,63,28,91,1140.3,1250.0,91.2,4.69,4.8,97.7,2592.0,28.48
+DISP-2026281,2026-08-26,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,55,32,87,1022.7,1250.0,81.8,4.71,4.8,98.2,1620.0,18.62
+DISP-2026282,2026-08-11,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,462,278,740,8623.8,9000.0,95.8,40.35,32.0,126.1,2688.0,3.63
+DISP-2026283,2026-09-08,Varanasi Rural Cross-Dock Hub,Mirzapur Commercial Trading Co.,Eicher 14T (Hub Linehaul / Milk-run),58.0,403,274,677,7635.9,9000.0,84.8,37.78,32.0,118.1,4872.0,7.2
+DISP-2026284,2026-08-24,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Eicher 14T (Hub Linehaul / Milk-run),105.0,418,275,693,7887.0,9000.0,87.6,38.43,32.0,120.1,8820.0,12.73
+DISP-2026285,2026-09-02,Varanasi Rural Cross-Dock Hub,Chandauli Last-Mile Agency,Eicher 14T (Hub Linehaul / Milk-run),32.0,430,281,711,8106.6,9000.0,90.1,39.38,32.0,123.1,2688.0,3.78
+DISP-2026286,2026-10-12,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,422,292,714,8014.2,9000.0,89.0,39.98,32.0,124.9,5460.0,7.65
+DISP-2026287,2026-09-09,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Tata Ace 1.25T (Last-Mile Feeder),72.0,55,32,87,1022.7,1250.0,81.8,4.71,4.8,98.2,2592.0,29.79
+DISP-2026288,2026-09-11,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,47,27,74,872.7,1250.0,69.8,4.0,4.8,83.3,5040.0,68.11
+DISP-2026289,2026-09-13,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,50,26,76,918.6,1250.0,73.5,4.03,4.8,84.0,3780.0,49.74
+DISP-2026290,2026-08-12,Varanasi Rural Cross-Dock Hub,Bhadohi Rural Agro-Retailer,Tata Ace 1.25T (Last-Mile Feeder),45.0,56,41,97,1071.6,1250.0,85.7,5.49,4.8,114.4,1620.0,16.7
+DISP-2026291,2026-09-30,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,61,39,100,1146.9,1250.0,91.8,5.52,4.8,114.9,2340.0,23.4
+DISP-2026292,2026-08-12,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Eicher 14T (Hub Linehaul / Milk-run),115.0,432,227,659,7945.2,9000.0,88.3,35.03,32.0,109.5,9660.0,14.66
+DISP-2026293,2026-08-21,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,49,40,89,952.5,1250.0,76.2,5.14,4.8,107.1,5040.0,56.63
+DISP-2026294,2026-10-09,Varanasi Rural Cross-Dock Hub,Ghazipur Rural Distribution Depot,Eicher 14T (Hub Linehaul / Milk-run),72.0,438,231,669,8058.6,9000.0,89.5,35.59,32.0,111.2,6048.0,9.04
+DISP-2026295,2026-08-15,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Tata Ace 1.25T (Last-Mile Feeder),65.0,53,37,90,1007.7,1250.0,80.6,5.05,4.8,105.2,2340.0,26.0
+DISP-2026296,2026-08-26,Varanasi Rural Cross-Dock Hub,Sonbhadra Mining Belt Logistics,Tata Ace 1.25T (Last-Mile Feeder),115.0,54,40,94,1035.0,1250.0,82.8,5.33,4.8,111.1,4140.0,44.04
+DISP-2026297,2026-10-10,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,51,38,89,978.3,1250.0,78.3,5.05,4.8,105.3,5040.0,56.63
+DISP-2026298,2026-10-18,Varanasi Rural Cross-Dock Hub,Ballia Border FMCG Stockist,Tata Ace 1.25T (Last-Mile Feeder),140.0,53,43,96,1029.3,1250.0,82.3,5.54,4.8,115.4,5040.0,52.5
+DISP-2026299,2026-09-17,Varanasi Rural Cross-Dock Hub,Jaunpur Consumer Supplies Hub,Eicher 14T (Hub Linehaul / Milk-run),65.0,408,306,714,7833.6,9000.0,87.0,40.6,32.0,126.9,5460.0,7.65
+DISP-2026300,2026-10-21,Varanasi Rural Cross-Dock Hub,Azamgarh Regional FMCG Point,Tata Ace 1.25T (Last-Mile Feeder),105.0,64,31,95,1167.6,1250.0,93.4,4.97,4.8,103.6,3780.0,39.79

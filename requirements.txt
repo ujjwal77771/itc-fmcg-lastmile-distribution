@@ -1,0 +1,12 @@
+# ITC Integrated Operations Decision Support System (IODSS)
+# Dependencies for Operations Analytics, Optimization & Web Control Tower
+
+# Core Scientific & Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+openpyxl>=3.1.0
+
+# Interactive Visualization & Control Tower
+plotly>=5.15.0
+streamlit>=1.28.0

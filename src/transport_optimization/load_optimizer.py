@@ -108,3 +108,4 @@ if __name__ == '__main__':
     print(f" - {bulky_cases} cases of {snack_sku['name']}")
     print(f"Stats: Weight: {stats['weight_kg']} kg ({stats['weight_utilization_pct']}%) | Volume: {stats['volume_cbm']} CBM ({stats['volume_utilization_pct']}%)")
     print(f"Combined Fleet Utilization: {stats['average_utilization_pct']}%")
+

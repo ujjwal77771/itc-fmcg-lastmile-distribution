@@ -117,3 +117,4 @@ if __name__ == '__main__':
     print(f" - Case Fill Rate:    {metrics['case_fill_rate_pct']}%")
     print(f" - On-Time Rate:      {metrics['on_time_rate_pct']}%")
     print(f" - Composite OTIF:    {metrics['composite_otif_pct']}%")
+

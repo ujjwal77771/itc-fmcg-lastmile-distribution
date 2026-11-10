@@ -89,3 +89,4 @@ if __name__ == '__main__':
 
     print(f"Historical Demand Tracking: WAPE = {wape:.2f}% | Bias = {bias:+.2f}%")
     print(f"4-Week Forward Forecast: {np.round(future_4w, 0).astype(int)} cases")
+

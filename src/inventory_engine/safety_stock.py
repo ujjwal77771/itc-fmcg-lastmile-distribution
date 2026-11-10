@@ -152,3 +152,4 @@ if __name__ == '__main__':
     print(f"Safety Stock Current Setup:  {ss_current:.1f} cases (Days of cover: {ss_current/36.0:.1f}d)")
     print(f"Safety Stock Proposed Setup: {ss_proposed:.1f} cases (Days of cover: {ss_proposed/36.0:.1f}d)")
     print(f"Buffer Stock Reduction:      {((ss_current - ss_proposed) / ss_current) * 100:.1f}%")
+

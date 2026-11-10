@@ -116,3 +116,4 @@ if __name__ == '__main__':
     print("\nOptimal Lane Allocation Matrix:")
     for lane in result['lane_allocations']:
         print(f" - {lane['from_plant']} -> {lane['to_depot']}: {lane['cases_shipped']:,.0f} cases @ ₹{lane['unit_freight']}/case (₹{lane['total_lane_cost']:,.2f})")
+

@@ -50,29 +50,43 @@ This platform investigates the mechanical breakdown in **ITC Limited's** tertiar
 
 ---
 
-## 💻 Python Analytics & Optimization Modules (`src/`)
+## 💻 Python Analytics & Operational Decision Support System (`src/`)
 
-The repository includes a production-grade Python analytics package implementing operations research algorithms:
+The repository features an industrial-grade **Integrated Operations Decision Support System (IODSS)** built for daily replenishment, dispatch planning, and transporter performance auditing:
 
-1. **Dynamic Inventory Engine (`src/inventory_engine/safety_stock.py`):**
+1. **Embedded Relational Operations Database (`data/itc_operations.db` & `src/data_loader.py`):**
+   - 1,200+ realistic FMCG transactions across Eastern UP & Western Bihar (Varanasi, Ghazipur, Jaunpur, Mirzapur, Ballia, Azamgarh).
+   - Indexed SQLite tables: `distributor_orders`, `inventory_snapshot`, `shipment_dispatch_log`, `distance_matrix`.
+   - Pre-compiled analytical SQL views:
+     - `vw_stockout_risk_watchlist`: Real-time safety stock breach monitor and case deficit tracker.
+     - `vw_carrier_otif_summary`: Transporter fill rate %, on-time %, and composite OTIF %.
+     - `vw_order_cut_diagnostics`: Root-cause cut isolation (Warehouse Stockout vs Credit Hold vs Vehicle Capacity Limit).
+
+2. **Dynamic Inventory Engine (`src/inventory_engine/safety_stock.py`):**
    - Stochastic periodic-review $(R, S)$ safety stock calculation: $SS = z \sqrt{(R+L)\sigma_d^2 + \bar{d}^2\sigma_L^2}$.
    - 9-box **ABC-XYZ Matrix Classification** based on revenue volume (ABC) and demand coefficient of variation (XYZ).
    - Dynamic Reorder Point ($ROP$) and Order-Up-To ($S$) calculation.
 
-2. **Dual-Constraint Vehicle Load Optimizer (`src/transport_optimization/load_optimizer.py`):**
+3. **Dual-Constraint Vehicle Load Optimizer (`src/transport_optimization/load_optimizer.py`):**
    - Mixed-cargo optimization balancing payload weight (KG) and volumetric space (CBM).
-   - Solves cargo-pairing heuristics (e.g., dense Aashirvaad Atta + bulky Bingo! potato chips) to achieve $>80-90\%$ utilization on both constraints simultaneously.
+   - Solves cargo-pairing heuristics (dense Aashirvaad Atta @ $434\text{ kg/m}^3$ + bulky Bingo! snacks @ $44\text{ kg/m}^3$) to achieve $>99\%$ payload and volume utilization on Tata Ace 1.25T feeders without paying "empty air" freight penalties.
 
-3. **Inbound Sourcing Linear Program (`src/transport_optimization/sourcing_solver.py`):**
-   - Solves multi-factory to multi-depot transportation cost minimization using `scipy.optimize.linprog` (Highs solver).
+4. **Inbound Sourcing Linear Program (`src/transport_optimization/sourcing_solver.py`):**
+   - Solves multi-factory to multi-depot transportation cost minimization using `scipy.optimize.linprog` (Highs simplex solver).
 
-4. **OTIF & Carrier Scorecard Engine (`src/performance_scorecards/otif_analyzer.py`):**
+5. **OTIF & Carrier Scorecard Engine (`src/performance_scorecards/otif_analyzer.py`):**
    - Computes On-Time %, Case Fill Rate %, Order Fill Rate %, and composite OTIF ($\text{On-Time \%} \times \text{Fill Rate \%}$).
    - Decouples warehouse stockout losses from carrier transit delays.
 
-5. **Demand Analytics & S&OP Error Tracking (`src/demand_analytics/forecast_engine.py`):**
+6. **Demand Analytics & S&OP Error Tracking (`src/demand_analytics/forecast_engine.py`):**
    - Implements Holt's Double Exponential Smoothing for trended demand.
    - Calculates Weighted Absolute Percentage Error (WAPE) and Forecast Bias %.
+
+7. **Operational Decision Runner (`run_decision_support.py`):**
+   - Single-command terminal execution delivering 07:00 AM dispatch, stockout alert, and linehaul sourcing recommendations for regional logistics managers.
+
+8. **Interactive Operations Control Tower (`app.py`):**
+   - 5-tab interactive Streamlit dashboard visualizing network KPIs, safety stock curves, vehicle load plans, and transporter OTIF scorecards.
 
 ---
 
@@ -125,36 +139,53 @@ A comprehensive, formula-driven supply chain and financial workbook built in `mo
 
 ---
 
-## 🛠️ How to Reproduce & Run the Test Suite
+## 🛠️ How to Reproduce & Run the System
 
-1. **Prerequisites:** Python 3.9+ with `openpyxl`, `numpy`, `scipy`, `pandas`:
+1. **Install Dependencies:**
    ```bash
-   pip install openpyxl numpy scipy pandas
+   pip install -r requirements.txt
    ```
-2. **Execute Automated Unit Tests:**
+2. **Execute Automated Unit Tests (8/8 Passing):**
    ```bash
    python -m unittest discover tests
    ```
-   Validates inventory formulas, vehicle loading constraints, and linear programming solver.
-3. **Generate the Excel Workbook:**
+   Validates periodic safety stock formulas, vehicle dual-constraint knapsack logic, transportation LP solver, and SQLite relational database views.
+
+3. **Run Daily Operational Decision Support System (Terminal CLI):**
+   ```bash
+   python run_decision_support.py
+   ```
+   Generates the morning logistics dispatch manifest, safety stock replenishment alerts, multi-depot sourcing allocations, and carrier OTIF scorecard.
+
+4. **Launch Interactive Web Control Tower (Streamlit):**
+   ```bash
+   streamlit run app.py
+   ```
+   *(Note: Running `python app.py` will also execute the terminal runner seamlessly if Streamlit is not yet installed).*
+
+5. **Generate the Excel Quantitative Model:**
    ```bash
    python model/generate_sheets.py
    ```
-   Outputs clean workbook at `model/itc_model.xlsx`.
-4. **Verify Formula Integrity & Cross-Sheet Links:**
+   Generates `model/itc_model.xlsx` with dynamic Excel formulas.
+
+6. **Verify Formula Integrity & Cross-Sheet Links:**
    ```bash
    python model/verify_formulas.py
    ```
-   Scans all 296 formulas, verifies OpenXML compatibility, checks cross-sheet references, and confirms zero formula errors.
+   Scans all 296 formulas, verifies OpenXML compatibility, checks cross-sheet references, and confirms zero `#NAME?` or broken links.
 
 ---
 
 ## 📂 Repository File Directory
 
+* [Executive Control Tower App](app.py): Interactive Streamlit dashboard for logistics operations.
+* [Daily Decision Support Runner](run_decision_support.py): Operational terminal runner for 07:00 AM dispatch planning.
+* [Operational Database & Data Loader](src/data_loader.py): SQLite generator and transactional data seeder (`data/itc_operations.db`).
 * [Project Report](ITC_LastMile_Project_Report.md): Full technical & managerial case study report (~6,000 words).
 * [Executive Presentation Deck](ITC_LastMile_Presentation_Deck.md): 15-slide executive presentation deck.
 * [Operational Analytics Modules](src/): Python package containing inventory, transportation, sourcing, and scorecard engines.
-* [Automated Unit Test Suite](tests/): Unit test coverage validating optimization algorithms and boundary limits.
+* [Automated Unit Test Suite](tests/): Unit test coverage validating optimization algorithms, boundary limits, and database integrity.
 * [Quantitative Supply Chain Model](model/itc_model.xlsx): 10-sheet quantitative supply chain and DCF valuation model.
 * [Model Generator Script](model/generate_sheets.py): Automated generator for the Excel workbook.
 * [Formula Verification Script](model/verify_formulas.py): Automated audit script verifying formula syntax, cross-sheet links, and OpenXML compatibility.

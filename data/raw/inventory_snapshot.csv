@@ -1,0 +1,21 @@
+depot_id,depot_name,sku_id,sku_name,category,unit_cost_inr,daily_demand_mean,daily_demand_std,lead_time_days,safety_stock_cases,reorder_point_cases,order_up_to_cases,current_stock_cases,in_transit_cases,days_of_coverage,stockout_risk_flag,replenish_trigger_flag
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-FOOD-001,Aashirvaad Superior MP Atta 1kg,Foods - Staples,48.0,52.0,12.0,1.5,64,142,454,60,0,1.2,1,1
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-FOOD-002,Aashirvaad Select Sharbati Atta 5kg,Foods - Staples,240.0,22.0,7.5,1.5,37,70,202,30,0,1.4,1,1
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-FOOD-003,Sunfeast Dark Fantasy Choco Fills 300g,Foods - Biscuits,95.0,34.0,8.0,2.0,47,115,319,51,34,2.5,1,1
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-FOOD-004,Sunfeast Bounce Cream 100g,Foods - Biscuits,30.0,45.0,10.0,2.0,59,149,419,48,90,3.1,1,1
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-FOOD-005,Bingo! Mad Angles Achaari Masti 45g,Foods - Snacks,20.0,40.0,11.0,1.5,53,113,353,53,0,1.3,1,1
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-FOOD-006,Bingo! Tedhe Medhe Masala 50g,Foods - Snacks,20.0,48.0,13.0,1.5,63,135,423,69,72,2.9,1,0
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-FOOD-007,YiPPee! Magic Masala Noodles 280g,Foods - Instant Noodles,55.0,38.0,9.5,2.0,54,130,358,39,38,2.0,1,1
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-PCP-001,Fiama Gel Bar Peach & Avocado 125g,Personal Care - Soaps,68.0,18.0,5.0,3.0,30,84,192,36,27,3.5,1,1
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-PCP-002,Savlon Moisture Shield Soap 100g,Personal Care - Health,38.0,28.0,6.0,2.5,37,107,275,31,0,1.1,1,1
+HUB-VARANASI,Varanasi Rural Cross-Dock Hub (Integrated),ITC-AGB-001,Mangaldeep Temple Gold Agarbatti,Agarbatti & Dhoop,45.0,24.0,7.0,2.0,36,84,228,40,24,2.7,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-FOOD-001,Aashirvaad Superior MP Atta 1kg,Foods - Staples,48.0,52.0,12.0,3.3,115,287,911,120,0,2.3,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-FOOD-002,Aashirvaad Select Sharbati Atta 5kg,Foods - Staples,240.0,22.0,7.5,3.3,60,133,397,54,73,5.8,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-FOOD-003,Sunfeast Dark Fantasy Choco Fills 300g,Foods - Biscuits,95.0,34.0,8.0,4.4,88,238,646,84,150,6.9,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-FOOD-004,Sunfeast Bounce Cream 100g,Foods - Biscuits,30.0,45.0,10.0,4.4,114,312,852,114,198,6.9,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-FOOD-005,Bingo! Mad Angles Achaari Masti 45g,Foods - Snacks,20.0,40.0,11.0,3.3,86,218,698,95,132,5.7,1,0
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-FOOD-006,Bingo! Tedhe Medhe Masala 50g,Foods - Snacks,20.0,48.0,13.0,3.3,102,261,837,137,0,2.9,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-FOOD-007,YiPPee! Magic Masala Noodles 280g,Foods - Instant Noodles,55.0,38.0,9.5,4.4,101,268,724,73,167,6.3,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-PCP-001,Fiama Gel Bar Peach & Avocado 125g,Personal Care - Soaps,68.0,18.0,5.0,6.6,57,176,392,65,0,3.6,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-PCP-002,Savlon Moisture Shield Soap 100g,Personal Care - Health,38.0,28.0,6.0,5.5,71,225,561,53,0,1.9,1,1
+RDC-LUCKNOW,Lucknow Mother RDC (Traditional Setup),ITC-AGB-001,Mangaldeep Temple Gold Agarbatti,Agarbatti & Dhoop,45.0,24.0,7.0,4.4,61,167,455,81,53,5.6,1,1
