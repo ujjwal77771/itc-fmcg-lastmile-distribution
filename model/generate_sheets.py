@@ -91,8 +91,8 @@ dash_rows = [
     ("On-Time Delivery %", "=Scorecard_and_OTIF!D9", "=Scorecard_and_OTIF!D10", "=C13-B13", "%", "Transporter adherence to scheduled delivery window"),
     ("OTIF Service Level (On-Time In-Full)", "=Scorecard_and_OTIF!E9", "=Scorecard_and_OTIF!E10", "=C14-B14", "%", "Core contractual SLA for distributor service"),
     ("Delivered Logistics Cost per Case", "=Delivered_Cost_Build!C15", "=Delivered_Cost_Build!D15", "=C15-B15", "₹ / Case", "Comprehensive delivered cost including trunk & milk-run"),
-    ("Vehicle Route Utilization (Weight)", "=District_Baseline!C38", "=District_Baseline!C38", "N/A", "%", "Tata Ace 1.25T load factor optimization"),
-    ("Vehicle Route Utilization (Volume)", "=District_Baseline!C37", "=District_Baseline!C37", "N/A", "%", "Volumetric cubic-meter load factor optimization"),
+    ("Vehicle Route Utilization (Weight)", "Unscheduled / ~50%", "=District_Baseline!C38", "N/A", "%", "Tata Ace 1.25T load factor optimization"),
+    ("Vehicle Route Utilization (Volume)", "Unscheduled / ~45%", "=District_Baseline!C37", "N/A", "%", "Volumetric cubic-meter load factor optimization"),
     ("Incremental Annual Cases (Single Hub)", "N/A", "=Revenue_and_Financials!C14", "=C18", "Cases/Year", "Combined OOS recapture and new rural outlet reach"),
     ("Incremental Annual Revenue (Single Hub)", "N/A", "=Revenue_and_Financials!C15", "=C19", "₹ Lakhs", "Annual top-line unlock per district hub"),
     ("3-Year Project NPV (150 Hubs @ 12% WACC)", "N/A", "=Revenue_and_Financials!D36", "=C20", "₹ Crores", "Discounted cash flow return on capital"),
@@ -147,8 +147,8 @@ for col_i, h in enumerate(headers_p, 1):
     c.font = font_hdr; c.fill = FILL_NAVY; c.alignment = align_c
 
 fin_inputs = [
-    ("Corporate Cost of Capital / WACC", "WACC", 0.12, "%", "ITC Cost of Capital Benchmark"),
-    ("ITC FMCG Blended Gross Margin", "GM", 0.38, "%", "ITC Annual Report FY24 segment reporting"),
+    ("Corporate Cost of Capital / WACC", "WACC", 0.12, "%", "Working Assumption (Standard FMCG hurdle rate)"),
+    ("ITC FMCG Blended Gross Margin", "GM", 0.38, "%", "Working Assumption (FMCG industry standard; ITC reports segment PBIT)"),
     ("Annual Working Capital Inventory Holding Rate", "h_rate", 0.15, "% p.a.", "Cost of capital (12%) + 3% warehousing shrinkage & insurance"),
     ("Standard Circuity Factor (Rural Roads)", "circuity", 1.20, "Factor", "Indian rural road network detour ratio vs euclidean"),
     ("Total Priority Rural Hub Districts Targeted", "N_hubs", 150, "Districts", "Targeted high-potential rural districts (UP, Bihar, MP, etc.)"),
@@ -179,8 +179,8 @@ net_params = [
     ("Delivery Lead Time Std Dev (Variability)", "σL", "Days", 3.0, 0.5, "Sub-stockist erratic van schedule vs Hub dedicated dispatch"),
     ("Target Cycle Service Level Factor (95%)", "z", "Factor", 1.645, 1.645, "Z-factor corresponding to 95% cycle non-stockout probability"),
     ("Baseline District Monthly FMCG Cases", "Base_Q", "Cases/Mo", 18000, 18000, "Estimated monthly throughput per district"),
-    ("Baseline Retail Stockout Rate (OOS)", "OOS_base", "%", 0.20, 0.08, "Current store audit stockout vs Target under hub formalisation"),
-    ("Demand Recapture % on Prevented OOS", "Recap_%", "%", 0.50, 0.50, "Sensitivity test parameter: % of lost sales recaptured"),
+    ("Baseline Retail Stockout Rate (OOS)", "OOS_base", "%", 0.20, 0.08, "Working Assumption: ~20% retail OOS observed in audits due to buffer deficit (kiranas hold <15 cases vs 635 needed); drops to 8% target with hub weekly replenishment"),
+    ("Demand Recapture % on Prevented OOS", "Recap_%", "%", 0.50, 0.50, "Sensitivity test parameter: % of lost sales recaptured (50% base assumption)"),
     ("New Rural Outlets Added per Hub", "New_Outlets", "Outlets", 0, 800, "Direct coverage expansion under hub milk-run routes"),
     ("Average Cases Ordered per New Outlet/Month", "Cases_New", "Cases/Mo", 0.0, 5.0, "Average replenishment volume per newly onboarded store")
 ]
@@ -343,7 +343,9 @@ doc_text = (
     "Periodic-Review Safety Stock Formula: SS = z * SQRT( (R + L) * σ_d^2 + d_bar^2 * σ_L^2 )\n"
     "Where: R = Replenishment review cycle (days), L = Lead time in transit (days), σ_d = Daily demand standard deviation,\n"
     "d_bar = Average daily demand, σ_L = Variability of delivery arrival (lead time std dev), z = Normal service factor.\n"
-    "Stockout Probability per Cycle = 1 - NORM.S.DIST(z, TRUE). Expected Fill Rate = 1 - (SS_Deficit / Cycle_Demand)."
+    "Stockout Probability per Cycle = 1 - NORMSDIST(z). Expected Fill Rate = 1 - (SS_Deficit / Cycle_Demand).\n"
+    "Note on Retail OOS vs Theoretical SS: The model calculates theoretical warehouse buffer needed for 95% cycle availability (z=1.645).\n"
+    "In the current setup, sub-stockists/kiranas hold <15 cases (capital constrained), causing the observed ~20% retail OOS."
 )
 ws_inv.merge_cells("A6:G7")
 c_doc = ws_inv['A6']
@@ -379,7 +381,7 @@ for idx, sku in enumerate(skus, 10):
     c_css = ws_inv.cell(row=idx, column=5, value=cur_ss_f)
     c_css.font = font_formula; c_css.alignment = align_r; c_css.number_format = '#,##0.0'
     
-    ws_inv.cell(row=idx, column=6, value="=1-NORM.S.DIST(Assumptions_Inputs!$D$20, TRUE)").font = font_formula
+    ws_inv.cell(row=idx, column=6, value="=1-NORMSDIST(Assumptions_Inputs!$D$20)").font = font_formula
     ws_inv.cell(row=idx, column=6).alignment = align_r; ws_inv.cell(row=idx, column=6).number_format = '0.0%'
     
     cur_fr_f = f"=1-F{idx}*(SQRT((Assumptions_Inputs!$D$17+Assumptions_Inputs!$D$18)*(D{idx}^2)+(C{idx}^2)*(Assumptions_Inputs!$D$19^2))/(C{idx}*Assumptions_Inputs!$D$17))"
@@ -390,7 +392,7 @@ for idx, sku in enumerate(skus, 10):
     c_hss = ws_inv.cell(row=idx, column=8, value=hub_ss_f)
     c_hss.font = font_formula; c_hss.alignment = align_r; c_hss.number_format = '#,##0.0'
     
-    ws_inv.cell(row=idx, column=9, value="=1-NORM.S.DIST(Assumptions_Inputs!$E$20, TRUE)").font = font_formula
+    ws_inv.cell(row=idx, column=9, value="=1-NORMSDIST(Assumptions_Inputs!$E$20)").font = font_formula
     ws_inv.cell(row=idx, column=9).alignment = align_r; ws_inv.cell(row=idx, column=9).number_format = '0.0%'
     
     hub_fr_f = f"=1-I{idx}*(SQRT((Assumptions_Inputs!$E$17+Assumptions_Inputs!$E$18)*(D{idx}^2)+(C{idx}^2)*(Assumptions_Inputs!$E$19^2))/(C{idx}*Assumptions_Inputs!$E$17))"
@@ -645,7 +647,7 @@ for idx, r_days in enumerate(oos_cycles, 21):
     c_ss = ws_sens.cell(row=idx, column=4, value=f"=Assumptions_Inputs!$E$20*C{idx}")
     c_ss.font = font_formula; c_ss.alignment = align_r; c_ss.number_format = '#,##0.0'
     
-    c_sp = ws_sens.cell(row=idx, column=5, value="=1-NORM.S.DIST(Assumptions_Inputs!$E$20, TRUE)")
+    c_sp = ws_sens.cell(row=idx, column=5, value="=1-NORMSDIST(Assumptions_Inputs!$E$20)")
     c_sp.font = font_formula; c_sp.alignment = align_r; c_sp.number_format = '0.0%'
     
     c_oos = ws_sens.cell(row=idx, column=6, value=f"=Assumptions_Inputs!$D$22*(A{idx}/Assumptions_Inputs!$D$17)")

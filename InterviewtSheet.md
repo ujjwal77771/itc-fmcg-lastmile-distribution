@@ -9,7 +9,7 @@
 >
 > *I dug into the distribution chain — K1 and K2 work fine, but K3 breaks down because the sub-stockist layer is completely informal: no system record, no route plan, no accountability. The result is a K3 TIT of about 10-14 days versus 4-6 days in urban, OTIF around 78% at the distributor level, and high retail OOS in rural stores.*
 >
-> *I proposed a five-lever fix called REACH — rural hub-and-spoke at the district level, village-level order points through the CSC network, a basic SFA app for demand signals, targeted cold chain at priority hubs, and formalising the sub-stockist K3 network with defined territories and incentives. The investment case works out to roughly ₹400-470 crore over 3 years for an estimated ₹2,500-3,500 crore in incremental revenue."*
+> *I proposed a five-lever fix called REACH — rural hub-and-spoke at the district level, village-level order points through the CSC network, a basic SFA app for demand signals, targeted cold chain at priority hubs, and formalising the sub-stockist K3 network with defined territories and incentives. The investment case models ₹430 crore over 3 years, unlocking ~₹1,326 crore in mature annual incremental revenue (~₹2,806 crore cumulative over 3 years) with a 20.5-month simple payback."*
 
 ---
 
@@ -29,11 +29,13 @@
 | Target K3 TIT | ~5-7 days | Author's target |
 | HUL rural reach (benchmark) | ~4.5 million outlets (estimated) | Trade press; HUL reports 9M+ total but doesn't break out rural |
 | HUL Shakti entrepreneurs | ~1.7-2 lakh | HUL Annual Reports (number has grown over years) |
-| CSC network size | 6.5 lakh gram panchayats | csc.gov.in |
-| VLEs at full scale (Year 3) | 50,000 | Author's target (7.7% activation of CSC network) |
-| Total 3-year investment estimate | ~₹400-470 Cr | Author's bottom-up estimate |
-| Incremental revenue estimate (Year 3) | ~₹2,500-3,500 Cr | Author's estimate (may include overlap — see caveats) |
-| Payback period estimate | ~18-24 months | Author's estimate (no formal DCF — honest about this) |
+| CSC network size | Government-established network across rural panchayats | csc.gov.in |
+| VLEs at full scale (Year 3) | 50,000 | Author's target (activation of priority rural CSC touchpoints) |
+| Total 3-year investment build | ₹430 Cr | Sourced from bottom-up model (`Delivered_Cost_Build` & `Revenue_and_Financials`) |
+| Mature Annual Incremental Revenue (Year 3) | ₹1,325.9 Cr / year | Modeled across 150 mature district hubs (~9.1M cases/yr) |
+| Cumulative 3-Year Incremental Revenue | ₹2,806.5 Cr | 3-year phased rollout (50 hubs Y1 → 150 hubs Y2/Y3) |
+| Simple Payback Period | ~20.5 months | Sourced from 3-year DCF cash flow model |
+| Project NPV (@ 12% WACC) | ₹379.9 Cr | Modeled in `Revenue_and_Financials` |
 
 > **Important:** When you cite a number, always say whether it's from a public source or your estimate. For example: *"ITC's rural fill rate is estimated at around 75-80% — ITC doesn't publish this number, so I've triangulated from distributor interviews cited in trade publications and Nielsen data."*
 
@@ -41,25 +43,28 @@
 
 ## 4. MATHEMATICAL FORMULAS & INVENTORY LOGIC
 
-### Safety Stock
-$$SS = Z \times \sigma_d \times \sqrt{LT}$$
+### Periodic-Review Safety Stock (Stochastic Demand & Lead Time)
+$$SS = z \times \sqrt{(R + L)\,\sigma_d^2 + \bar{d}^2\,\sigma_L^2}$$
 
 Where:
-- Z = service level factor (1.65 for 95% service, 1.28 for 90%)
-- σ_d = standard deviation of daily demand
-- LT = lead time in days
+- $z$ = service level factor (1.645 for 95% cycle service level, 1.28 for 90%)
+- $R$ = replenishment review cycle (Current sub-stockist: 12 days $\rightarrow$ Proposed Hub: 6 days)
+- $L$ = transit lead time (Current: 4 days $\rightarrow$ Proposed Hub: 1.5 days)
+- $\sigma_d$ = standard deviation of daily demand
+- $\bar{d}$ = average daily demand
+- $\sigma_L$ = delivery arrival lead-time variability (Current: 3.0 days $\rightarrow$ Proposed Hub: 0.5 days)
 
-**Example you can give:** *"For an A-class SKU like Aashirvaad 1kg atta at a district warehouse with 10-day K2 lead time and high demand variability, I'd set Z=1.65 (95% service level), which might give me 12-15 days of safety stock. For a C-class SKU like a niche Sunfeast variant, Z=1.28 (90%) with lower safety stock — freeing working capital."*
+**Example you can give:** *"In the informal sub-stockist setup, high arrival variability ($\sigma_L \approx 3$ days) and a 12-day review cycle require a massive safety stock buffer of ~635 cases for an A-class SKU like Aashirvaad 1kg atta to hit a theoretical 95% service level. Cash-strapped sub-stockists hold fewer than 15 cases, causing retail stockouts of ~20%. By establishing a district hub with scheduled weekly milk-runs ($R=6$ days, $\sigma_L=0.5$ days), the required buffer drops to 186 cases — freeing >70% of channel working capital and realistically achieving an 8% retail OOS."*
 
-### Reorder Point
-$$ROP = (\bar{d} \times LT) + SS$$
+### Continuous-Review Reorder Point (for warehouse replenishment)
+$$ROP = (\bar{d} \times L) + SS$$
 
-Where d̄ = average daily demand, LT = lead time, SS = safety stock.
+Where $\bar{d}$ = average daily demand, $L$ = lead time, $SS$ = safety stock.
 
-### Cost Per Case
-$$\text{CPC} = \frac{\text{Total logistics cost (freight + handling + warehouse)}}{\text{Total cases delivered}}$$
+### End-to-End Delivered Cost Per Case
+$$\text{CPC} = \text{Linehaul Trunk Freight} + \text{Hub Handling} + \text{Facility Rent} + \text{Holding Cost} + \text{Milk-Run Delivery Freight}$$
 
-**Key insight for interview:** *"Rural K3 cost-per-case is 2-3x urban because of lower drop density, longer distances, and partial truck loads. The hub-and-spoke model improves this by consolidating K3 loads at the district hub."*
+**Key insight for interview:** *"The Rural Hub is primarily an availability and OTIF enabler (lifting OTIF from ~56% to ~90%), not a freight cost-reduction initiative. Delivered cost drops from ₹74.55 to ₹71.86/case (-₹2.69/case or -3.6%), as linehaul savings and inventory efficiencies are balanced by formal facility rent and cross-dock handling."*
 
 ---
 
@@ -145,8 +150,8 @@ Days 61–90 (Pilot Milk-Run & SFA Integration): Implement a scheduled milk-run 
 ## CV BULLET POINTS (pick 2-3, updated for Logistics JD)
 
 - *Analysed ITC FMCG's rural K3 logistics gap: estimated 10-14 day TIT and ~78% distributor OTIF vs. 4-6 day urban benchmark; proposed hub-and-spoke district restructuring (REACH framework) targeting 90%+ OTIF*
-- *Designed a 150-district Rural Hub network to formalise sub-stockist K3 operations, with ₹400-470 Cr investment case and ~₹2,500 Cr estimated incremental revenue by Year 3*
-- *Conducted field research on ITC's rural distribution chain in Azamgarh, UP; identified zero demand visibility below Preferred Stockist level as primary driver of rural OOS*
+- *Designed a 150-district Rural Hub network to formalise sub-stockist K3 operations, with ₹430 Cr 3-year investment build unlocking ₹1,326 Cr mature annual incremental revenue (₹2,806.5 Cr 3-year cumulative)*
+- *Conducted field observation and informal retailer visits in Azamgarh district, UP; identified zero demand visibility below Preferred Stockist level as primary driver of rural OOS*
 - *Benchmarked ITC against HUL (Project Shakti), Dabur (RSE model), Marico (Rural Super Distributor) on rural outlet reach, K3 TIT, and cost-per-case economics*
 - *Proposed inventory management approach using ABC classification and safety stock optimisation to reduce warehouse OOS and improve freshness at rural distribution points*
 

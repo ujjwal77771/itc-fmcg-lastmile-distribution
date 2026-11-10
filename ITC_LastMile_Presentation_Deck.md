@@ -184,16 +184,17 @@ Took their best urban distributors per district. Gave them extra margin + credit
 
 # SLIDE 10 — E: VILLAGE ENTREPRENEUR NETWORK
 
-## Leveraging India's 6.5 Lakh CSC Infrastructure for Demand Aggregation
+## Leveraging Government CSC Infrastructure for Rural Demand Aggregation
 
-**Existing Asset:** Common Service Centres (CSCs) operate in 6.5 lakh gram panchayats with established digital devices, internet connectivity, and village trust.
+**Existing Asset:** The Government of India's Common Service Centre (CSC) network spans rural gram panchayats with established digital devices, internet connectivity, and village trust.
 
 **Operational Model:** Partner with CSC India to enable Village Level Entrepreneurs (VLEs) to aggregate weekly retail product demand:
+- Prioritize top 50,000 active VLE touchpoints across 150 target districts
 - VLE aggregates orders via mobile SFA $\rightarrow$ Fulfilled by nearest Rural Hub within 3–4 days
 - 4–5% variable commission structure based on delivered volume
 - Creates branded retail presence and village-level sell-out visibility
 
-At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual GMV throughput**
+At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual gross demand throughput**
 
 ---
 

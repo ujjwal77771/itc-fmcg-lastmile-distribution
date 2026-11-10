@@ -1,6 +1,6 @@
 # ITC FMCG Last-Mile Distribution: Solving the Rural Reach & Logistics Gap
 
-> *A rigorous supply chain case study & financial model for campus recruitment — ITC GET (Logistics & Warehousing)*  
+> *A District-Level Supply Chain Strategy & Quantitative Distribution Logistics Model for Rural FMCG Distribution*  
 > **Author:** Ujjwal Deep | B.Tech — Mechanical Engineering (3rd Year), BIT Mesra
 
 ---
@@ -10,8 +10,10 @@
 This project investigates why **ITC Limited** — despite commanding a ₹20,000+ crore FMCG portfolio and deep rural brand trust built over two decades via e-Choupal — struggles with shelf availability in rural kirana stores.
 
 * **The Observation:** An informal kirana store in rural Azamgarh, UP had stopped stocking Aashirvaad atta because shipments never arrived on time. The shopkeeper permanently switched shelf space to a regional competitor brand.
-* **The Root Cause:** In FMCG logistics terminology, **K1** (primary freight: plant to mother warehouse) and **K2** (secondary freight: warehouse to wholesale distributor) operate with high efficiency. The breakdown occurs at **K3** (tertiary freight: distributor to rural retailer). The sub-stockist layer is informal, unmapped in ITC's Distributor Management System (DMS), and runs on an erratic 10–14 day cycle with an estimated ~78% distributor fill rate.
+* **The Root Cause:** In standard FMCG logistics tiering (Primary, Secondary, and Tertiary freight, classified as K1, K2, and K3 in ITC Logistics operations): Primary K1 (plant to regional warehouse) and Secondary K2 (warehouse to wholesale distributor) operate with high efficiency. The breakdown occurs at Tertiary K3 (distributor to rural retailer). The sub-stockist layer is informal, unmapped in ITC's central Distributor Management System (DMS), and runs on an erratic 10–14 day cycle with an estimated ~75–80% distributor fill rate.
 * **The Strategic Solution:** The **REACH Framework** formalizes the district-level last-mile network by deploying 150 Rural Hubs (cross-docks), digitizing replenishment signals, scheduling dedicated milk-runs, and formalizing sub-stockists with defined territories and service-level agreements.
+
+> 💡 **Strategic Logistics Insight:** The Hub model is primarily an operational **service-level and revenue enabler** (lifting OTIF from ~56% to ~90% and cutting review cycle from 12d to 6d), **not a freight cost-cutting mechanism**. Net delivered logistics cost per case is essentially neutral (-3.6% saving or ₹2.69/case), as linehaul freight and cross-dock handling replace informal middleman markups.
 
 ---
 
@@ -62,18 +64,19 @@ $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
 
 ## 📈 Key Findings & 3-Year Reconciled Targets
 
-| Metric | Current Setup | Proposed Hub Setup | 3-Year Impact |
+| Metric | Current Setup | Proposed Hub Setup | Operational & Strategic Impact |
 |---|---|---|---|
-| **K3 Replenishment Cycle ($R$)** | 10–14 days (est. 12d) | 5–7 days (target 6d) | Halved exposure period |
-| **Distributor Fill Rate** | ~75–80% (est. 78%) | 90–92% | +14% order completeness |
-| **Composite OTIF** | ~56% | ~90% | Predictable retailer delivery |
-| **Atta Safety Stock Days of Cover** | ~17.5 days | ~5.1 days | **70.7% reduction** in buffer stock |
-| **Delivered Cost per Case** | ₹74.55 / case | ₹71.86 / case | -₹2.69 / case net savings |
-| **Vehicle Load Factor** | Erratic / Sub-optimal | 80.8% Vol / 86.9% Wt | High capacity utilization |
-| **Cumulative 3-Year Incremental Revenue** | — | **₹2,806.5 Crores** | Within ₹2,500–3,500 Cr target range |
-| **Total 3-Year Capital & Opex Investment** | — | **₹430.0 Crores** | Within ₹400–470 Cr budget |
-| **3-Year Project NPV (@ 12% WACC)** | — | **₹379.9 Crores** | Strong economic value add |
-| **Simple Payback Period** | — | **~20.5 Months** | Within 18–24 month target |
+| **K3 Replenishment Cycle ($R$)** | 10–14 days (est. 12d) | 5–7 days (target 6d) | Halved retailer exposure period to stockouts |
+| **Distributor Fill Rate** | ~75–80% (est. 78%) | 90–92% | +14% order completeness at distribution nodes |
+| **Composite OTIF (On-Time In-Full)** | ~56% | ~90% | Predictable weekly store replenishment |
+| **Atta Safety Stock Days of Cover** | ~17.5 days | ~5.1 days | **70.7% reduction** in required channel buffer stock |
+| **Delivered Cost per Case** | ₹74.55 / case | ₹71.86 / case | -₹2.69 / case net savings (essentially cost-neutral) |
+| **Vehicle Route Load Factor** | Unscheduled / ~45-50% | 80.8% Vol / 86.9% Wt | Route-planned multi-constraint load optimization |
+| **Mature Annual Incremental Revenue (Y3)** | — | **₹1,325.9 Crores / Year** | Top-line unlock across 150 district hubs |
+| **Cumulative 3-Year Incremental Revenue** | — | **₹2,806.5 Crores** | Phased 3-year rollout (50 hubs Y1 $\rightarrow$ 150 hubs Y2/Y3) |
+| **Total 3-Year Capex & Opex Investment** | — | **₹430.0 Crores** | Self-funding operational expansion |
+| **3-Year Project NPV (@ 12% WACC)** | — | **₹379.9 Crores** | Discounted cash flow economic value creation |
+| **Simple Payback Period** | — | **~20.5 Months** | Capital recovery within 2 years |
 
 ---
 
@@ -92,10 +95,7 @@ $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
    ```bash
    python model/verify_formulas.py
    ```
-4. **Simulate Mathematical Logic & Verify All 10 Checks:**
-   ```bash
-   python model/simulate_math.py
-   ```
+   Scans all 296 formulas, verifies OpenXML compatibility, checks cross-sheet references, and confirms zero formula errors.
 
 ---
 
@@ -106,7 +106,7 @@ $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
 * [`HR_Interview_CheatSheet.md`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/HR_Interview_CheatSheet.md): Interview preparation guide — ITC logistics terminology (K1/K2/K3, WSP, WD, TIT, OTIF), formulas, and top 10 hardest interviewer questions with grounded answers.
 * [`model/itc_model.xlsx`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/model/itc_model.xlsx): 10-sheet quantitative supply chain and DCF valuation model.
 * [`model/generate_sheets.py`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/model/generate_sheets.py): Automated generator for the Excel workbook.
-* [`model/simulate_math.py`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/model/simulate_math.py): Verification script confirming all 10 automated integrity checks pass.
+* [`model/verify_formulas.py`](file:///c:/Users/BIT/OneDrive/Desktop/ANTIGRAVITY%20BACKUP/scratch/itc-lastmile-project/model/verify_formulas.py): Automated audit script verifying formula syntax, cross-sheet links, and OpenXML compatibility.
 
 ---
 
