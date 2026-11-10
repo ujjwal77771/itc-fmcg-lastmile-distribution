@@ -1,0 +1,14 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary and local interview preparation notes
+*Interview*
+*CheatSheet*
+
+# Environment and OS artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.bak

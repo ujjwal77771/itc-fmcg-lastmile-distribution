@@ -95,9 +95,9 @@ dash_rows = [
     ("Vehicle Route Utilization (Volume)", "Unscheduled / ~45%", "=District_Baseline!C37", "N/A", "%", "Volumetric cubic-meter load factor optimization"),
     ("Incremental Annual Cases (Single Hub)", "N/A", "=Revenue_and_Financials!C14", "=C18", "Cases/Year", "Combined OOS recapture and new rural outlet reach"),
     ("Incremental Annual Revenue (Single Hub)", "N/A", "=Revenue_and_Financials!C15", "=C19", "₹ Lakhs", "Annual top-line unlock per district hub"),
-    ("3-Year Project NPV (150 Hubs @ 12% WACC)", "N/A", "=Revenue_and_Financials!D36", "=C20", "₹ Crores", "Discounted cash flow return on capital"),
-    ("3-Year Project IRR (150 Hubs)", "N/A", "=Revenue_and_Financials!D37", "=C21", "%", "Internal rate of return on 3-year investment"),
-    ("Simple Payback Period", "N/A", "=Revenue_and_Financials!D38", "=C22", "Months", "Capital recovery horizon")
+    ("Base Scenario NPV (150 Hubs @ 12% WACC)", "N/A", "=Revenue_and_Financials!D36", "=C20", "₹ Crores", "DCF scenario output (depends on 50% recapture & 800 outlets/hub)"),
+    ("Base Scenario IRR (150 Hubs)", "N/A", "=Revenue_and_Financials!D37", "=C21", "%", "Scenario return on 3-year investment (high operating leverage)"),
+    ("Base Scenario Simple Payback", "N/A", "=Revenue_and_Financials!D38", "=C22", "Months", "Capital recovery horizon (scenario projection)")
 ]
 
 for idx, r in enumerate(dash_rows, 6):
@@ -132,6 +132,8 @@ ws_sum.cell(row=24, column=1, value="System Audit Integrity Status").font = font
 ws_sum.cell(row=24, column=2, value="=Checks!C18").font = font_link
 ws_sum.cell(row=24, column=2).alignment = align_c
 ws_sum.cell(row=24, column=3, value="Overall Model Integrity Verification").font = font_sub
+
+ws_sum.cell(row=26, column=1, value="*Methodological Note: NPV, IRR, and Payback are indicative scenario outputs of the base-case model, highly sensitive to 50% demand recapture and 800 new outlets/hub. They serve as planning targets for district pilot testing rather than guaranteed findings.").font = font_sub
 
 # ==============================================================================
 # SHEET 2: Assumptions_Inputs
@@ -831,6 +833,6 @@ for ws in wb.worksheets:
             max_len = max(max_len, len(v))
         ws.column_dimensions[col_letter].width = max(max_len + 3, 11)
 
-out_path = r"c:\Users\BIT\OneDrive\Desktop\ANTIGRAVITY BACKUP\scratch\itc-lastmile-project\model\itc_model.xlsx"
+out_path = os.path.join(os.path.dirname(__file__), "itc_model.xlsx")
 wb.save(out_path)
-print(f"Workbook successfully regenerated to: {out_path}")
+print(f"Workbook successfully regenerated to: {os.path.relpath(out_path)}")

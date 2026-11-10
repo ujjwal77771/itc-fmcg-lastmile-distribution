@@ -110,12 +110,12 @@ These are small traders on bikes and tempos — not in ITC's system, no agreemen
 
 | Problem | What it looks like | Why it matters |
 |---|---|---|
-| **12-day replenishment cycle** | Competitor refills shelf before ITC does | Retailer allocates shelf space to who shows up reliably |
-| **~78% fill rate** | 1 in 5 orders doesn't get fulfilled | Retailer stocks competitor brand to fill the gap |
-| **Zero demand data below stockist** | ITC is supply-pushing without knowing rural demand | Wrong SKUs, wrong quantities, chronic over/under-stocking |
-| **~20% rural stockout rate** | Product not on shelf when consumer wants it | Consumer buys Parle or Britannia instead — habit forms |
+| **12-day replenishment cycle (est.)** | Competitor refills shelf before ITC does | Retailer allocates shelf space to who shows up reliably |
+| **~78% distributor fill rate (est.)** | 1 in 5 orders doesn't get fulfilled | Retailer stocks competitor brand to fill the gap |
+| **Zero demand data below stockist** | Supply-pushing without knowing rural consumption | Wrong SKUs, wrong quantities, chronic over/under-stocking |
+| **~20% rural retail stockout rate (est.)** | Product not on shelf when consumer wants it | Consumer buys Parle or Britannia instead — habit forms |
 
-*These estimates come from distributor interviews cited in trade publications and Nielsen data. ITC doesn't publish rural-specific distribution KPIs publicly.*
+*These operational estimates are derived from distributor interviews cited in trade publications, field observations, and Nielsen data. FMCG companies do not publish rural-specific distribution KPIs.*
 
 ---
 
@@ -149,11 +149,11 @@ Took their best urban distributors per district. Gave them extra margin + credit
 
 # SLIDE 8 — THE PROPOSED SOLUTION
 
-## The REACH Framework: Strategic Pillars for Rural K3 Logistics
+## The REACH Framework: Strategic Pillars for Rural Last-Mile Logistics
 
 | Pillar | Operational Lever | Problem Addressed |
 |---|---|---|
-| **R** | Rural Hub-and-Spoke (150 district hubs) | K3 Lead Time (TIT), coverage density |
+| **R** | Rural Hub-and-Spoke (150 district hubs) | Tertiary Last-Mile Lead Time (TIT), coverage density |
 | **E** | Enlisting Village Entrepreneurs via CSC Network | Last-mile demand visibility, rural order aggregation |
 | **A** | Automated Replenishment & Mobile SFA | Real-time stockout data, pull-based replenishment |
 | **C** | Cold Chain Capability (Phase 2/3) | Temperature-sensitive portfolio readiness |
@@ -233,7 +233,7 @@ At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual gross deman
 - Launch 50-Hub Pilot across Uttar Pradesh (Azamgarh, Jaunpur, Varanasi clusters)
 - Register and territory-map sub-stockists in pilot districts
 - Deploy offline SFA mobile application to 200 field sales reps
-- Measure baseline K3 TIT, OTIF, and retail OOS
+- Measure baseline last-mile delivery lead time (TIT), OTIF, and retail OOS
 
 **Phase 2 (Months 7–18) — Regional Scale-Up**
 - Scale to all 150 target districts across UP, Bihar, MP, Rajasthan, Odisha, WB
@@ -250,9 +250,9 @@ At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual gross deman
 
 ---
 
-# SLIDE 13 — FINANCIAL FEASIBILITY & 3-YEAR DCF MODEL
+# SLIDE 13 — FINANCIAL MODELING & SCENARIO PROJECTIONS
 
-## Capital Budgeting & Cash Flow Projections (150 Hubs)
+## Indicative Base-Case Financial Projections (150 District Hubs)
 
 **3-Year Phased Investment Build:**
 
@@ -266,11 +266,14 @@ At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual gross deman
 | Field Training & Change Management | ₹15 Cr |
 | **Total 3-Year Investment** | **₹430 Cr** |
 
-**3-Year Financial Model Outputs (from `model/itc_model.xlsx`):**
+**Base-Case Scenario Model Outputs (from `model/itc_model.xlsx`):**
 - **Cumulative 3-Year Incremental Revenue:** **₹2,806.5 Cr**
 - **Annual Incremental Revenue at Maturity (Year 3):** **₹1,325.9 Cr**
 - **Net Present Value (NPV @ 12% WACC):** **₹379.9 Cr**
-- **Simple Payback Period:** **~20.5 Months**
+- **Modeled Simple Payback Period:** **~20.5 Months**
+- **Modeled IRR:** **~114%**
+
+*Methodological Note: Financial outputs are scenario model projections, not historical findings. They depend directly on base-case working hypotheses of 50% demand recapture and 800 new outlets per hub at ~5 cases/month, which represent planning targets to be tested during district pilot trials.*
 
 ---
 
@@ -284,7 +287,7 @@ At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual gross deman
 |---|---|---|
 | **Wholesale Channel Conflict** | Urban stockists resist rural hub exclusivity | Tiered margins; ring-fence rural territories with dedicated distributor codes |
 | **Government CSC Scalability** | Slower institutional onboarding of VLEs | Direct pilot with top 5,000 active VLEs before national expansion |
-| **Monsoon Road Access & Disruption** | K3 TIT spikes during rainy season in East UP/Bihar | Buffer safety stocks at hub prior to monsoon; deploy high-clearance pickups |
+| **Monsoon Road Access & Disruption** | Last-mile delivery transit time spikes during rainy season in East UP/Bihar | Buffer safety stocks at hub prior to monsoon; deploy high-clearance pickups |
 | **Rural SKU Margin Cannibalization** | ₹5 packs yield low gross margin contribution | Value-pack bundling (Atta + Spices, Biscuits + Confectionery) to sustain basket value |
 
 ---
@@ -297,7 +300,7 @@ At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual gross deman
 
 **1. Days 1–30: Physical Route & Retail Audit**
 - Ride along on existing sub-stockist delivery beats in Azamgarh cluster
-- Benchmark actual K3 Time in Transit (TIT) and retail stockout rates across 50 stores
+- Benchmark actual last-mile Time in Transit (TIT) and retail stockout rates across 50 stores
 
 **2. Days 31–60: Hub Facility Selection & Sub-Stockist Formalization**
 - Identify 1,500 sq ft cross-dock godown facility near highway junction
@@ -311,7 +314,7 @@ At 50,000 active VLEs averaging ₹15,000/month = **₹900 Cr annual gross deman
 
 ## Conclusion
 
-By bridging the K3 distribution gap between the Preferred Stockist and the rural retailer, ITC can transform its rural procurement trust into shelf dominance.
+By bridging the tertiary last-mile distribution gap between the wholesale stockist and the rural retailer, ITC can transform its rural procurement trust into shelf dominance.
 
 **Ujjwal Deep | BIT Mesra | Mechanical Engineering**
 

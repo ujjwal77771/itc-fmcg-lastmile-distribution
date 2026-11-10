@@ -61,7 +61,7 @@ Before going further, I should clarify two terms I use throughout:
 - Shopkeepers who've switched to competitor brands not because they dislike ITC, but simply because ITC's product wasn't reliably available
 - No particular "pull" from rural consumers toward ITC brands — awareness is okay, but availability is the bottleneck
 
-This is a **logistics and K3 distribution problem**, not a marketing problem. In FMCG logistics terminology: K1 (factory to regional warehouse) and K2 (warehouse to distributor) work fine. It's **K3 — distributor to retailer** — that breaks down in rural India.
+This is a **last-mile distribution and tertiary logistics problem**, not a marketing problem. Across FMCG freight distribution tiers: Primary freight (factory to regional warehouse) and Secondary freight (warehouse to distributor) work fine. It is **Tertiary last-mile freight — distributor to retailer** (designated K1, K2, and K3 in some FMCG operating vernacular) that breaks down in rural India.
 
 ### Who Gets Hurt
 
@@ -141,12 +141,12 @@ Sub-Stockist (informal, unregistered, not in DMS)
 Rural Kirana Store
 ```
 
-**In FMCG logistics, these are called K1, K2, and K3:**
-- **K1 (Primary):** Factory to Mother Warehouse — long-haul, bulk, well-optimised. ITC has decades of investment here.
-- **K2 (Secondary):** Mother Warehouse to Distributor/WD — route-planned, system-tracked via DMS. Works reasonably well.
-- **K3 (Tertiary):** Distributor to Retailer — the last mile. In urban markets this is tight (4-6 day cycle, high OTIF). In rural markets, this is where the entire chain falls apart.
+**In FMCG freight tiering (naming used in some FMCG operating vernacular: K1, K2, K3):**
+- **Primary Freight (K1):** Factory to Regional Distribution Centre / Mother Warehouse — long-haul, bulk FTL, well-optimised.
+- **Secondary Freight (K2):** Regional Warehouse to Wholesale Distributor (WD) — scheduled, system-tracked via DMS.
+- **Tertiary Last-Mile Freight (K3):** Distributor to Retailer — the last mile. In urban markets this operates on a tight 4–6 day cycle. In rural markets, this is where the distribution chain breaks down into informal sub-stockist channels.
 
-The first two tiers (K1, K2) work reasonably well — this is standard FMCG distribution and ITC has invested in it over decades. **The problem is K3 — the last mile.**
+The first two tiers (Primary and Secondary freight) work reasonably well — this is standard FMCG trunk distribution. **The operational breakdown occurs at the Tertiary last-mile tier.**
 
 The sub-stockist layer is almost entirely informal. These are small-time traders who move around in tempos, bikes, or even cycles — picking up stock from the Preferred Stockist and selling it to kirana stores in nearby villages. They're not registered with ITC. ITC doesn't have their names in a system. They carry whatever they think will sell, not necessarily what ITC wants pushed. And if they don't show up for two weeks, the village kirana store simply has no ITC products.
 
@@ -435,7 +435,9 @@ A critical finding of the activity-based cost build (`Delivered_Cost_Build`) is 
 
 ---
 
-### 3-Year DCF Valuation & Investment Returns
+### 3-Year DCF Valuation & Base-Case Scenario Projections
+
+> ⚠️ **Methodological Note on Returns:** The valuation outputs below (NPV ₹379.9 Cr, Payback ~20.5 months, IRR ~114%) represent **indicative base-case scenario projections of the financial model**, rather than empirical findings. They depend directly on two central working hypotheses: (1) a 50% demand recapture rate on prevented store out-of-stock events, and (2) adding 800 new direct retail outlets per district hub averaging ~5 cases/month (~65 cases/year). Because these assumptions are sensitive to local competitor substitution and route dynamics, they must be treated as pilot test hypotheses to be calibrated against actual field audit data before full capital commitment.
 
 Financial projections in `model/itc_model.xlsx` evaluate cash flows over a 3-year horizon:
 
@@ -445,7 +447,7 @@ Financial projections in `model/itc_model.xlsx` evaluate cash flows over a 3-yea
 * **Cost of Capital (WACC):** **12.0%** (working assumption reflecting FMCG corporate hurdle rate).
 * **Net Present Value (NPV @ 12%):** **₹379.9 Crores**.
 * **Simple Payback Period:** **~20.5 Months** (full capital recovery achieved within Year 2).
-* **Internal Rate of Return (IRR):** Modeled at ~114%, driven by high operating leverage on low fixed assets. *(Note: Because returns are highly sensitive to outlet expansion and recapture assumptions, the business case emphasizes operational stability, cash payback at 20.5 months, and service-level gains rather than headlining high IRR percentages).*
+* **Internal Rate of Return (IRR):** Modeled at ~114%, driven by high operating leverage on low fixed assets. *(Presented as an illustrative scenario output under full outlet execution, not as a core operational finding).*
 
 ---
 
