@@ -1,25 +1,84 @@
-# ITC FMCG Last-Mile Distribution: Solving the Rural Reach & Logistics Gap
+# ITC FMCG Last-Mile Distribution: Supply Chain Analytics & Network Optimization Platform
 
-> *A District-Level Supply Chain Strategy & Quantitative Distribution Logistics Model for Rural FMCG Distribution*  
-> **Author:** Ujjwal Deep | B.Tech — Mechanical Engineering (3rd Year), BIT Mesra
+> *An Enterprise Integrated Operations Analytics Suite for Multi-Echelon FMCG Distribution, Inventory Buffering & Logistics Optimization*  
+> **Author:** Ujjwal Deep | B.Tech — Mechanical Engineering (3rd Year), BIT Mesra  
+> **Target Profile:** ITC Limited — Integrated Operations & Supply Chain Analytics
 
 ---
 
-## 📌 Executive Summary
+## 📌 Executive Summary & Operational Problem
 
-This project investigates why **ITC Limited** — despite commanding a ₹20,000+ crore FMCG portfolio and deep rural brand trust built over two decades via e-Choupal — struggles with shelf availability in rural kirana stores.
+This platform investigates the mechanical breakdown in **ITC Limited's** tertiary last-mile distribution network across rural districts.
 
-* **The Observation:** An informal kirana store in rural Azamgarh, UP had stopped stocking Aashirvaad atta because shipments never arrived on time. The shopkeeper permanently switched shelf space to a regional competitor brand.
-* **The Root Cause:** Across freight tiers (Primary, Secondary, and Tertiary freight, designated K1, K2, and K3 in some FMCG operating vernacular): Primary freight (plant to regional warehouse) and Secondary freight (warehouse to wholesale distributor) operate with high efficiency. The breakdown occurs at Tertiary last-mile freight (distributor to rural retailer). The sub-stockist layer is informal, unmapped in the central Distributor Management System (DMS), and runs on an erratic 10–14 day cycle with an estimated ~75–80% distributor fill rate.
-* **The Strategic Solution:** The **REACH Framework** formalizes the district-level last-mile network by deploying 150 Rural Hubs (cross-docks), digitizing replenishment signals, scheduling dedicated milk-runs, and formalizing sub-stockists with defined territories and service-level agreements.
+* **The Ground Reality:** An informal kirana retailer in rural Azamgarh, UP had stopped stocking Aashirvaad atta because shipments never arrived on time. The retailer permanently shifted scarce shelf space to a regional competitor brand.
+* **The Root Cause:** In multi-echelon FMCG logistics:
+  - **Primary Freight (K1: Factory $\rightarrow$ Central Warehouse):** High-efficiency bulk FTL linehaul.
+  - **Secondary Freight (K2: Warehouse $\rightarrow$ Wholesale Distributor):** Route-planned and system-tracked via DMS.
+  - **Tertiary Last-Mile Freight (K3: Distributor $\rightarrow$ Rural Kirana):** Breaks down into an informal sub-stockist layer. Cash-constrained sub-stockists (operating on ₹5k–10k working capital) carry $<15$ cases buffer against a mathematical requirement of 635 cases under an erratic 10–14 day cycle ($\sigma_L \approx 3.0$ days), producing the **~20% retail store stockout rate** observed in the field.
+* **The Integrated Operations Solution:** The **REACH Platform** deploys district-level cross-dock hubs, compresses replenishment review cycles from 12 to 6 days ($\sigma_L = 0.5$ days), cuts required safety stock by 70.7%, optimizes vehicle weight-cube loading to >80%, and lifts composite distributor OTIF from 56% to 90%.
 
-> 💡 **Strategic Logistics Insight:** The Hub model is primarily an operational **service-level and revenue enabler** (lifting OTIF from ~56% to ~90% and cutting review cycle from 12d to 6d), **not a freight cost-cutting mechanism**. Net delivered logistics cost per case is essentially neutral (-3.6% saving or ₹2.69/case), as linehaul freight and cross-dock handling replace informal middleman markups.
+> 💡 **Core Operational Truth:** The Rural Hub is primarily an **availability and OTIF enabler**, not a freight cost-reduction mechanism. Delivered cost per case is essentially cost-neutral (-₹2.69/case or -3.6%), as linehaul freight and cross-dock handling replace informal middleman markups.
+
+---
+
+## 🏭 Multi-Echelon FMCG Network Architecture
+
+```
+[ ITC Manufacturing Plant / Integrated Food Park ]
+  (Haridwar / Pune / Malur / Panchgram)
+        │
+        │── Primary Freight (30-40T Multi-Axle FTL / Rail Container)
+        ▼
+[ Central / Mother Warehouse (CW) ]
+  (Palletized high-density storage, national buffer stock)
+        │
+        │── Secondary Linehaul (16-24T Heavy Commercial Vehicles)
+        ▼
+[ Regional Distribution Centre (RDC) ]
+  (Varanasi / Lucknow / Patna — Cross-dock staging, order consolidation)
+        │
+        │── Secondary Trunk Freight (9-14T Medium Trucks)
+        ▼
+[ District Rural Hub / Preferred Stockist (WD) ]
+  (Azamgarh / Jaunpur / Ballia — Buffer stock, mixed-case picking, credit control)
+        │
+        │── Tertiary Milk-Runs (1.25-2.5T Tata Ace / Bolero Pickups)
+        ▼
+[ Rural Kirana Stores ]
+  (Weekly beat orders, cash/UPI on delivery, 10-15 sq ft retail display)
+```
+
+---
+
+## 💻 Python Analytics & Optimization Modules (`src/`)
+
+The repository includes a production-grade Python analytics package implementing operations research algorithms:
+
+1. **Dynamic Inventory Engine (`src/inventory_engine/safety_stock.py`):**
+   - Stochastic periodic-review $(R, S)$ safety stock calculation: $SS = z \sqrt{(R+L)\sigma_d^2 + \bar{d}^2\sigma_L^2}$.
+   - 9-box **ABC-XYZ Matrix Classification** based on revenue volume (ABC) and demand coefficient of variation (XYZ).
+   - Dynamic Reorder Point ($ROP$) and Order-Up-To ($S$) calculation.
+
+2. **Dual-Constraint Vehicle Load Optimizer (`src/transport_optimization/load_optimizer.py`):**
+   - Mixed-cargo optimization balancing payload weight (KG) and volumetric space (CBM).
+   - Solves cargo-pairing heuristics (e.g., dense Aashirvaad Atta + bulky Bingo! potato chips) to achieve $>80-90\%$ utilization on both constraints simultaneously.
+
+3. **Inbound Sourcing Linear Program (`src/transport_optimization/sourcing_solver.py`):**
+   - Solves multi-factory to multi-depot transportation cost minimization using `scipy.optimize.linprog` (Highs solver).
+
+4. **OTIF & Carrier Scorecard Engine (`src/performance_scorecards/otif_analyzer.py`):**
+   - Computes On-Time %, Case Fill Rate %, Order Fill Rate %, and composite OTIF ($\text{On-Time \%} \times \text{Fill Rate \%}$).
+   - Decouples warehouse stockout losses from carrier transit delays.
+
+5. **Demand Analytics & S&OP Error Tracking (`src/demand_analytics/forecast_engine.py`):**
+   - Implements Holt's Double Exponential Smoothing for trended demand.
+   - Calculates Weighted Absolute Percentage Error (WAPE) and Forecast Bias %.
 
 ---
 
 ## 📊 The Quantitative Model (`model/itc_model.xlsx`)
 
-A comprehensive, formula-driven supply chain and financial model has been built in `model/itc_model.xlsx` complying with professional corporate finance and logistics modeling standards (zero hardcoded formula constants, zero circular references, automated audit checks).
+A comprehensive, formula-driven supply chain and financial workbook built in `model/itc_model.xlsx` complying with professional corporate finance and logistics modeling standards (zero hardcoded formula constants, zero circular references, automated audit checks).
 
 ### Model Architecture (10 Sheets)
 
@@ -35,30 +94,6 @@ A comprehensive, formula-driven supply chain and financial model has been built 
 | 8 | `Scorecard_and_OTIF` | OTIF framework ($\text{OTIF} = \text{On-Time \%} \times \text{Fill Rate \%}$) and Transporter Benchmarking Scorecard across 4 district carrier vendors. |
 | 9 | `Compliance` | Statutory & EHS compliance matrix for district warehousing and transportation operations. |
 | 10 | `Checks` | 10 automated mathematical integrity checks displaying `PASS`/`FAIL` and master system integrity indicator. |
-
----
-
-## 🔬 Core Supply Chain Formulas Documented in Model
-
-### 1. Periodic-Review Safety Stock (Stochastic Demand & Lead Time)
-$$SS = z \times \sqrt{(R + L)\,\sigma_d^2 + \bar{d}^2\,\sigma_L^2}$$
-* **$R$:** Replenishment review cycle (Current: 12 days $\rightarrow$ Proposed Hub: 6 days)
-* **$L$:** Delivery lead time in transit (Current: 4 days $\rightarrow$ Proposed Hub: 1.5 days)
-* **$\sigma_d$:** Daily demand standard deviation
-* **$\bar{d}$:** Average daily demand
-* **$\sigma_L$:** Delivery arrival lead-time variability (Current: 3.0 days $\rightarrow$ Proposed Hub: 0.5 days)
-* **$z$:** Service level factor (1.645 for 95% cycle service level)
-
-### 2. Vehicle Capacity & Route Utilization
-$$\text{Cases Delivered per Trip} = \min(\text{Truck Capacity in Cases},\,\text{Orders on Route})$$
-$$\text{Volumetric Utilization} = \frac{\text{Cases Delivered}}{\text{Case Capacity}} \quad\Big|\quad \text{Weight Utilization} = \frac{\text{Delivered Weight}}{\text{Rated Payload}}$$
-
-### 3. Incremental Volume Build
-$$\text{Incremental Cases} = \Big[\text{Baseline Cases} \times (\text{OOS}_{\text{before}} - \text{OOS}_{\text{after}}) \times \text{Recapture \%}\Big] + \big[\text{New Outlets} \times \text{Cases/Outlet}\big]$$
-> 📌 **Key Sensitivity Parameter:** The Demand Recapture % on Prevented OOS (conservatively set at 50% in base case) depends on brand loyalty vs competitor substitution dynamics. This parameter serves as the primary test hypothesis for the 60-day district pilot.
-
-### 4. Service Level Metric (OTIF)
-$$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
 
 ---
 
@@ -90,18 +125,23 @@ $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
 
 ---
 
-## 🛠️ How to Reproduce & Run the Model
+## 🛠️ How to Reproduce & Run the Test Suite
 
-1. **Prerequisites:** Python 3.9+ with `openpyxl`:
+1. **Prerequisites:** Python 3.9+ with `openpyxl`, `numpy`, `scipy`, `pandas`:
    ```bash
-   pip install openpyxl
+   pip install openpyxl numpy scipy pandas
    ```
-2. **Generate the Excel Workbook:**
+2. **Execute Automated Unit Tests:**
+   ```bash
+   python -m unittest discover tests
+   ```
+   Validates inventory formulas, vehicle loading constraints, and linear programming solver.
+3. **Generate the Excel Workbook:**
    ```bash
    python model/generate_sheets.py
    ```
    Outputs clean workbook at `model/itc_model.xlsx`.
-3. **Verify Formula Integrity & Cross-Sheet Links:**
+4. **Verify Formula Integrity & Cross-Sheet Links:**
    ```bash
    python model/verify_formulas.py
    ```
@@ -113,6 +153,8 @@ $$\text{OTIF \%} = \text{On-Time Delivery \%} \times \text{Order Fill Rate \%}$$
 
 * [Project Report](ITC_LastMile_Project_Report.md): Full technical & managerial case study report (~6,000 words).
 * [Executive Presentation Deck](ITC_LastMile_Presentation_Deck.md): 15-slide executive presentation deck.
+* [Operational Analytics Modules](src/): Python package containing inventory, transportation, sourcing, and scorecard engines.
+* [Automated Unit Test Suite](tests/): Unit test coverage validating optimization algorithms and boundary limits.
 * [Quantitative Supply Chain Model](model/itc_model.xlsx): 10-sheet quantitative supply chain and DCF valuation model.
 * [Model Generator Script](model/generate_sheets.py): Automated generator for the Excel workbook.
 * [Formula Verification Script](model/verify_formulas.py): Automated audit script verifying formula syntax, cross-sheet links, and OpenXML compatibility.
