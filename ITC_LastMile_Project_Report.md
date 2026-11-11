@@ -433,7 +433,7 @@ The activity-based cost build (`Delivered_Cost_Build`) reconciles the full suppl
 | Sub-Stockist Informal Trade Margin | ₹0.00 | ₹0.00 | ₹0.00 (Informal trader markup eliminated under direct hub delivery) |
 | **Total Delivered Logistics Cost** | **₹77.73** | **₹63.22** | **-₹14.51 / case (-18.7% net delivered cost variance)** |
 
-*The logistics cost reduction of ₹14.51/case is paired with decisive operational transformation: composite OTIF improves from **70.4% to 96.6%** (+26.2 pp), lead time drops from 4.0 days to 1.5 days, and delivery arrival variance ($\sigma_L$) falls from 3.0 days to 0.5 days.*
+*The logistics cost reduction of ₹14.51/case is paired with decisive operational transformation: composite OTIF improves from **71.0% to 97.1%** (+26.1 pp), lead time drops from 4.0 days to 1.5 days, and delivery arrival variance ($\sigma_L$) falls from 3.0 days to 0.5 days.*
 
 ---
 

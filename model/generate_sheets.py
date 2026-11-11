@@ -92,7 +92,7 @@ dash_rows = [
     ("Safety Stock Inventory Cover", "=Inventory_Logic!E17", "=Inventory_Logic!H17", "=C11-B11", "Days of Cover", "Capital buffer reduction from 5.3 to 1.6 days"),
     ("Order Fill Rate (Target / Benchmark)", "=Inventory_Logic!G15", "=Inventory_Logic!J15", "=C12-B12", "pp (% pts)", "Contractual order fill rate uplift via local hub inventory"),
     ("On-Time Delivery % (Transporter SLA)", "=Scorecard_and_OTIF!B8", "=Scorecard_and_OTIF!C8", "=C13-B13", "pp (% pts)", "Dedicated beat schedule vs irregular distributor tempo (+26 pp)"),
-    ("Composite OTIF Service Level (On-Time In-Full)", "=Scorecard_and_OTIF!B9", "=Scorecard_and_OTIF!C9", "=C14-B14", "pp (% pts)", "Composite OTIF delivery perfection (70.4% -> 96.6%, +26.2 pp)"),
+    ("Composite OTIF Service Level (On-Time In-Full)", "=Scorecard_and_OTIF!B9", "=Scorecard_and_OTIF!C9", "=C14-B14", "pp (% pts)", "Composite OTIF delivery perfection (71.0% -> 97.1%, +26.1 pp)"),
     ("Delivered Logistics Cost per Case", "=Delivered_Cost_Build!C15", "=Delivered_Cost_Build!D15", "=C15-B15", "₹ / Case", "-₹14.51 / case net logistics savings (-18.7% delivered cost)"),
     ("Vehicle Route Utilization (Weight)", "Unscheduled / ~50%", "=District_Baseline!C39", "N/A", "%", "Payload chassis weight utilization under dual knapsack constraint (86.9%)"),
     ("Vehicle Route Utilization (Volume)", "Unscheduled / ~45%", "=District_Baseline!C38", "N/A", "%", "Volumetric cargo space utilization on circuit (80.8%)"),
