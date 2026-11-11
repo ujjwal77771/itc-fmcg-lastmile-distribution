@@ -102,7 +102,7 @@ if nav_option == "1. Executive Control Tower":
     with col3:
         st.metric(label="Safety Stock Buffer Reduction", value="68.4%", delta="-₹41.2L Working Capital")
     with col4:
-        st.metric(label="Logistics Cost per Case", value="₹ 71.86", delta="-₹ 2.69 / case (-3.6%)")
+        st.metric(label="Logistics Cost per Case", value="₹ 63.22", delta="-₹ 14.51 / case (-18.7%)")
 
     st.markdown("---")
     

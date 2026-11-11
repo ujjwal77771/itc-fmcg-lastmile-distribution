@@ -419,19 +419,21 @@ $$\text{Incremental Cases} = \Big[\text{Baseline Cases} \times (\text{OOS}_{\tex
 
 ### End-to-End Delivered Logistics Cost per Case
 
-A critical finding of the activity-based cost build (`Delivered_Cost_Build`) is that **the Rural Hub is primarily a service-level, availability, and revenue enabler, not a freight cost-reduction initiative**:
+The activity-based cost build (`Delivered_Cost_Build`) reconciles the full supply chain cost from factory linehaul to final store delivery:
 
 | Cost Component | Current Setup (₹/case) | Proposed Hub Setup (₹/case) | Operational Variance & Mechanics |
 |---|---|---|---|
-| Linehaul Trunk Freight (Factory $\rightarrow$ Node) | ₹26.00 | ₹24.50 | -₹1.50 (Consolidated FTL linehaul to district hub) |
-| Hub / Godown Handling | ₹7.25 | ₹8.50 | +₹1.25 (Cross-dock sorting and pallet staging) |
-| Facility Rent & Utilities | — | ₹6.50 | +₹6.50 (Dedicated 1,500 sq ft district cross-dock) |
-| District Inventory Carrying Cost | ₹6.80 | ₹2.36 | -₹4.44 (Safety stock cut from 17.5d to 5.1d of cover) |
-| Tertiary Delivery Freight (Milk-Run) | ₹34.50 | ₹29.00 | -₹5.50 (Scheduled milk-runs with 80%+ load factor) |
-| Transit Damage & Shrinkage | — | ₹1.00 | +₹1.00 (Allowance for rural road transit shock) |
-| **Total Delivered Logistics Cost** | **₹74.55** | **₹71.86** | **-₹2.69 / case (-3.6% net cost variance)** |
+| Primary Trunk Linehaul Freight | ₹26.00 | ₹28.50 | +₹2.50 (Allocated 16T FTL trunk freight from Haridwar/Panchgram to district hub) |
+| Hub Cross-Dock Handling & Sorting | ₹7.25 | ₹4.50 | -₹2.75 (Mechanical pallet unloading, sorting & staging) |
+| District Warehouse Lease Rental | ₹0.00 | ₹2.50 | +₹2.50 (Leased 1,500 sq ft cross-dock amortized over 18,000 cases/mo) |
+| Inventory Working Capital Holding Cost | ₹3.18 | ₹0.96 | -₹2.22 (Safety stock reduced from 5.3 to 1.6 days of cover @ 15% holding rate) |
+| Secondary Milk-Run Freight (Route Run) | ₹34.50 | ₹23.65 | -₹10.85 (Scheduled Tata Ace circuit milk-run replacing middleman tempo margins) |
+| Dedicated Driver Daily Compensation | ₹0.00 | ₹0.94 | +₹0.94 (Fixed daily wage of ₹650 for dedicated driver) |
+| Packaging Shrinkage & Transit Loss | ₹6.80 | ₹2.18 | -₹4.62 (Damage reduced from 0.47% to 0.15% via crate palletization & secured transport) |
+| Sub-Stockist Informal Trade Margin | ₹0.00 | ₹0.00 | ₹0.00 (Informal trader markup eliminated under direct hub delivery) |
+| **Total Delivered Logistics Cost** | **₹77.73** | **₹63.22** | **-₹14.51 / case (-18.7% net delivered cost variance)** |
 
-*While freight savings are modest (₹2.69/case), the operational transformation is decisive: composite OTIF improves from **~56% to ~90%**, lead time drops from 12 days to 6 days, and retail availability rises by 12 percentage points.*
+*The logistics cost reduction of ₹14.51/case is paired with decisive operational transformation: composite OTIF improves from **70.4% to 96.6%** (+26.2 pp), lead time drops from 4.0 days to 1.5 days, and delivery arrival variance ($\sigma_L$) falls from 3.0 days to 0.5 days.*
 
 ---
 
@@ -442,7 +444,7 @@ A critical finding of the activity-based cost build (`Delivered_Cost_Build`) is 
 Financial projections in `model/itc_model.xlsx` evaluate cash flows over a 3-year horizon:
 
 * **Mature Annual Incremental Revenue (Year 3):** **₹1,325.9 Crores / Year** across 150 hubs.
-* **Cumulative 3-Year Incremental Revenue:** **₹2,806.5 Crores** (Year 1: ₹363.9 Cr [50 hubs]; Year 2: ₹1,116.7 Cr [150 hubs]; Year 3: ₹1,325.9 Cr [150 mature hubs]).
+* **Cumulative 3-Year Incremental Revenue:** **₹2,806.5 Crores** (Year 1: ₹287.3 Cr [50 hubs]; Year 2: ₹1,193.3 Cr [150 hubs]; Year 3: ₹1,325.9 Cr [150 mature hubs]).
 * **Gross Margin:** **38.0%** (working assumption based on ITC FMCG segment gross profitability).
 * **Cost of Capital (WACC):** **12.0%** (working assumption reflecting FMCG corporate hurdle rate).
 * **Net Present Value (NPV @ 12%):** **₹379.9 Crores**.

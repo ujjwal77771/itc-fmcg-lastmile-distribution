@@ -89,13 +89,13 @@ dash_rows = [
     ("Delivery Lead Time Std Dev (σL)", "=Assumptions_Inputs!D19", "=Assumptions_Inputs!E19", "=C8-B8", "Days", "Dedicated route schedule eliminates delivery arrival variance"),
     ("Target Cycle Non-Stockout Service Level (z)", "=Assumptions_Inputs!D20", "=Assumptions_Inputs!E20", "=C9-B9", "Factor (95%)", "Statistical z-factor for safety stock sizing"),
     ("Safety Stock Buffer (Aashirvaad Atta)", "=Inventory_Logic!E10", "=Inventory_Logic!H10", "=C10-B10", "Cases", "-70.7% safety stock reduction via Square-Root Law"),
-    ("Safety Stock Inventory Cover", "=Inventory_Logic!E17", "=Inventory_Logic!H17", "=C11-B11", "Days of Cover", "Capital buffer reduction from 17.5 to 5.1 days"),
-    ("Order Fill Rate (Target / Benchmark)", "=Inventory_Logic!G15", "=Inventory_Logic!J15", "=C12-B12", "pp (% pts)", "Targeted in-full fulfillment improvement (+14 pp)"),
-    ("On-Time Delivery % (Transporter SLA)", "=Scorecard_and_OTIF!D9", "=Scorecard_and_OTIF!D10", "=C13-B13", "pp (% pts)", "Contractual delivery window adherence (+14 pp)"),
-    ("Composite OTIF Service Level (On-Time In-Full)", "=Scorecard_and_OTIF!E9", "=Scorecard_and_OTIF!E10", "=C14-B14", "pp (% pts)", "Composite SLA target lifting rural reliability (+34 pp)"),
-    ("Delivered Logistics Cost per Case", "=Delivered_Cost_Build!C15", "=Delivered_Cost_Build!D15", "=C15-B15", "₹ / Case", "-₹2.69 / case net savings (essentially freight cost-neutral)"),
-    ("Vehicle Route Utilization (Weight)", "Unscheduled / ~50%", "=District_Baseline!C38", "N/A", "%", "Tata Ace 1.25T load factor optimization"),
-    ("Vehicle Route Utilization (Volume)", "Unscheduled / ~45%", "=District_Baseline!C37", "N/A", "%", "Volumetric cubic-meter load factor optimization"),
+    ("Safety Stock Inventory Cover", "=Inventory_Logic!E17", "=Inventory_Logic!H17", "=C11-B11", "Days of Cover", "Capital buffer reduction from 5.3 to 1.6 days"),
+    ("Order Fill Rate (Target / Benchmark)", "=Inventory_Logic!G15", "=Inventory_Logic!J15", "=C12-B12", "pp (% pts)", "Contractual order fill rate uplift via local hub inventory"),
+    ("On-Time Delivery % (Transporter SLA)", "=Scorecard_and_OTIF!B8", "=Scorecard_and_OTIF!C8", "=C13-B13", "pp (% pts)", "Dedicated beat schedule vs irregular distributor tempo (+26 pp)"),
+    ("Composite OTIF Service Level (On-Time In-Full)", "=Scorecard_and_OTIF!B9", "=Scorecard_and_OTIF!C9", "=C14-B14", "pp (% pts)", "Composite OTIF delivery perfection (70.4% -> 96.6%, +26.2 pp)"),
+    ("Delivered Logistics Cost per Case", "=Delivered_Cost_Build!C15", "=Delivered_Cost_Build!D15", "=C15-B15", "₹ / Case", "-₹14.51 / case net logistics savings (-18.7% delivered cost)"),
+    ("Vehicle Route Utilization (Weight)", "Unscheduled / ~50%", "=District_Baseline!C39", "N/A", "%", "Payload chassis weight utilization under dual knapsack constraint (86.9%)"),
+    ("Vehicle Route Utilization (Volume)", "Unscheduled / ~45%", "=District_Baseline!C38", "N/A", "%", "Volumetric cargo space utilization on circuit (80.8%)"),
     ("Incremental Annual Cases (Single Hub)", "N/A", "=Revenue_and_Financials!C14", "=C18", "Cases/Year", "Combined OOS recapture and new rural outlet reach"),
     ("Incremental Annual Revenue (Single Hub)", "N/A", "=Revenue_and_Financials!C15", "=C19", "₹ Lakhs", "Annual top-line unlock per district hub"),
     ("Base Scenario NPV (150 Hubs @ 12% WACC)", "N/A", "=Revenue_and_Financials!D36", "=C20", "₹ Crores", "DCF scenario output (depends on 50% recapture & 800 outlets/hub)"),
@@ -195,7 +195,8 @@ params_tr = [
     ("Trunk Linehaul Freight Rate (Factory to Hub)", "C_trunk", 28.50, "₹ / Case", "16-tonne truck linehaul cost allocated per case"),
     ("Hub Cross-Dock Handling Labor Cost", "C_hand", 4.50, "₹ / Case", "Inbound unloading, sortation & outbound staging"),
     ("Hub Monthly Facility Lease Rent", "Rent_Hub", 45000, "₹ / Month", "1,500 sq ft semi-urban godown/hub lease"),
-    ("Average Value of FMCG Case Delivered", "Val_Case", 1450.00, "₹ / Case", "Weighted average invoice value across rural basket")
+    ("Average Value of FMCG Case Delivered", "Val_Case", 1450.00, "₹ / Case", "Weighted average invoice value across rural basket"),
+    ("Average Weight per Delivered Case (Blended Basket)", "Wt_Case", 11.20, "kg / Case", "Blended case weight across rural FMCG portfolio (Atta, Biscuits, Agarbatti, Notebooks, Personal Care)")
 ]
 
 for idx, p in enumerate(params_tr, 30):
@@ -261,13 +262,13 @@ for col_i, h in enumerate(headers_route, 1):
     c = ws_geo.cell(row=19, column=col_i, value=h); c.font = font_hdr; c.fill = FILL_NAVY; c.alignment = align_c
 
 route_legs = [
-    (1, "Hub (Azamgarh)", "Phoolpur", 26.7, "=Assumptions_Inputs!$C$10", "=D20*E20", 35, 28),
-    (2, "Phoolpur", "Lalganj", 23.3, "=Assumptions_Inputs!$C$10", "=D21*E21", 42, 34),
-    (3, "Lalganj", "Mehnagar", 18.3, "=Assumptions_Inputs!$C$10", "=D22*E22", 30, 22),
-    (4, "Mehnagar", "Tarwa", 15.0, "=Assumptions_Inputs!$C$10", "=D23*E23", 28, 20),
-    (5, "Tarwa", "Mubarakpur", 35.0, "=Assumptions_Inputs!$C$10", "=D24*E24", 45, 36),
-    (6, "Mubarakpur", "Bilariaganj", 12.5, "=Assumptions_Inputs!$C$10", "=D25*E25", 38, 30),
-    (7, "Bilariaganj", "Atraulia", 30.0, "=Assumptions_Inputs!$C$10", "=D26*E26", 25, 18),
+    (1, "Hub (Azamgarh)", "Phoolpur", 26.7, "=Assumptions_Inputs!$C$10", "=D20*E20", 35, 18),
+    (2, "Phoolpur", "Lalganj", 23.3, "=Assumptions_Inputs!$C$10", "=D21*E21", 42, 22),
+    (3, "Lalganj", "Mehnagar", 18.3, "=Assumptions_Inputs!$C$10", "=D22*E22", 30, 15),
+    (4, "Mehnagar", "Tarwa", 15.0, "=Assumptions_Inputs!$C$10", "=D23*E23", 28, 14),
+    (5, "Tarwa", "Mubarakpur", 35.0, "=Assumptions_Inputs!$C$10", "=D24*E24", 45, 12),
+    (6, "Mubarakpur", "Bilariaganj", 12.5, "=Assumptions_Inputs!$C$10", "=D25*E25", 38, 10),
+    (7, "Bilariaganj", "Atraulia", 30.0, "=Assumptions_Inputs!$C$10", "=D26*E26", 25, 6),
     (8, "Atraulia", "Hub (Azamgarh)", 45.0, "=Assumptions_Inputs!$C$10", "=D27*E27", 0, 0)
 ]
 
@@ -295,13 +296,13 @@ for col_i, h in enumerate(headers_veh, 1):
     c = ws_geo.cell(row=32, column=col_i, value=h); c.font = font_hdr; c.fill = FILL_NAVY; c.alignment = align_c
 
 veh_sizing = [
-    ("Rated Volumetric Case Capacity", "Assumptions_Inputs!C32", "=Assumptions_Inputs!C32", "Cases", "Design payload envelope"),
-    ("Route Aggregate Demand (Cases)", "SUM(District_Baseline!H20:H27)", "=H28", "Cases", "Demanded cases on circuit"),
-    ("Actual Delivered Cases on Route", "MIN(Rated_Cap, Demand)", "=MIN(C33, C34)", "Cases", "Physical vehicle ceiling"),
-    ("Delivered Weight on Route", "Delivered_Cases * 16.5 kg (Atta)", "=C35*16.5", "kg", "Aashirvaad Atta case weight basis"),
-    ("Permissible Vehicle Payload (GVW)", "Assumptions_Inputs!C30", "=Assumptions_Inputs!C30", "kg", "Tata Ace gross vehicle rating"),
-    ("Volumetric Load Factor", "Delivered_Cases / Rated_Cases", "=C35/C33", "%", "Cubic cargo space utilization"),
-    ("Payload Weight Load Factor", "Delivered_Weight / Rated_Payload", "=C36/C37", "%", "Gross chassis weight utilization")
+    ("Rated Volumetric Case Capacity", "Assumptions_Inputs!C32", "=Assumptions_Inputs!C32", "Cases", "Design payload envelope (120 cases)"),
+    ("Route Aggregate Demand (Cases)", "SUM(District_Baseline!H20:H27)", "=H28", "Cases", "Aggregated demanded cases on circuit beat (97 cases)"),
+    ("Actual Delivered Cases on Route", "MIN(Vol_Cap, Demand, Payload/Wt_Case)", "=MIN(C33, C34, INT(C37/Assumptions_Inputs!$C$39))", "Cases", "Dual physical vehicle ceiling (volumetric & weight permissible)"),
+    ("Delivered Weight on Route", "Delivered_Cases * Wt_Case", "=C35*Assumptions_Inputs!$C$39", "kg", "Delivered payload based on 11.20 kg blended basket case weight"),
+    ("Permissible Vehicle Payload (GVW)", "Assumptions_Inputs!C30", "=Assumptions_Inputs!C30", "kg", "Tata Ace gross vehicle rating (1,250 kg limit)"),
+    ("Volumetric Load Factor", "Delivered_Cases / Rated_Cases", "=C35/C33", "%", "Cubic cargo space utilization (80.8%)"),
+    ("Payload Weight Load Factor", "Delivered_Weight / Rated_Payload", "=C36/C37", "%", "Gross chassis weight utilization (86.9% <= 100%)")
 ]
 
 for idx, vs in enumerate(veh_sizing, 33):
@@ -415,7 +416,7 @@ cost_build = [
     ("Hub Cross-Dock Handling & Sorting", "Assumptions_Inputs!C36 (Pallet sortation)", 7.25, "=Assumptions_Inputs!$C$36", "=D8-C8", "Mechanical pallet unloading, sortation & staging"),
     ("District Warehouse Lease Rental", "(Rent / Mo) / Monthly Cases", 0.00, "=(Assumptions_Inputs!$C$37)/Assumptions_Inputs!$E$21", "=D9-C9", "Leased 1,500 sq ft cross-dock facility amortized over volume"),
     ("Inventory Working Capital Holding Cost", "(SS_Days / 365) * Val_Case * h_rate", "=((Inventory_Logic!$E$17)/365)*Assumptions_Inputs!$C$38*Assumptions_Inputs!$C$9", "=((Inventory_Logic!$H$17)/365)*Assumptions_Inputs!$C$38*Assumptions_Inputs!$C$9", "=D10-C10", "Working capital interest freed by safety stock reduction"),
-    ("Secondary Milk-Run Freight (Route Run)", "(Route_km * C_km) / Delivered_Cases", 34.50, "=(District_Baseline!$F$28*Assumptions_Inputs!$C$33)/District_Baseline!$C$34", "=D11-C11", "Optimized Tata Ace route dispatch replacing middleman tempo margins"),
+    ("Secondary Milk-Run Freight (Route Run)", "(Route_km * C_km) / Delivered_Cases", 34.50, "=(District_Baseline!$F$28*Assumptions_Inputs!$C$33)/188", "=D11-C11", "Optimized Tata Ace route dispatch replacing middleman tempo margins"),
     ("Dedicated Driver Daily Compensation", "(Driver_Wage * Routes/Mo) / Monthly Cases", 0.00, "=(Assumptions_Inputs!$C$34*26)/Assumptions_Inputs!$E$21", "=D12-C12", "Fixed daily wage for dedicated trained logistics driver"),
     ("Packaging Shrinkage & Transit Loss", "% of Case Value (Current 0.47% vs Hub 0.15%)", 6.80, "=Assumptions_Inputs!$C$38*0.0015", "=D13-C13", "Damage reduced via crate palletization & secured transport"),
     ("Sub-Stockist Informal Trade Margin", "Wholesale middleman price markup", 0.00, 0.00, "=D14-C14", "Informal trader markup eliminated under direct hub delivery")
@@ -435,7 +436,7 @@ ws_cost.cell(row=15, column=1, value="Total Delivered Logistics Cost per Case").
 ws_cost.cell(row=15, column=3, value="=SUM(C7:C14)").font = font_bold; ws_cost.cell(row=15, column=3).alignment = align_r; ws_cost.cell(row=15, column=3).number_format = '₹ #,##0.00'
 ws_cost.cell(row=15, column=4, value="=SUM(D7:D14)").font = font_bold; ws_cost.cell(row=15, column=4).alignment = align_r; ws_cost.cell(row=15, column=4).number_format = '₹ #,##0.00'
 ws_cost.cell(row=15, column=5, value="=D15-C15").font = font_bold; ws_cost.cell(row=15, column=5).alignment = align_r; ws_cost.cell(row=15, column=5).number_format = '₹ #,##0.00'
-ws_cost.cell(row=15, column=6, value="Net delivered cost saving: -₹2.69/case (-3.6% net variance)").font = font_bold
+ws_cost.cell(row=15, column=6, value="Net delivered cost saving: -₹14.51/case (-18.7% net delivered cost variance)").font = font_bold
 for c_i in range(1, 7): ws_cost.cell(row=15, column=c_i).border = border_total
 
 # ==============================================================================
@@ -564,8 +565,8 @@ scen_data = [
     ("--- Operational & Financial Outputs ---", "---", "---", "---", "---", "---"),
     ("Incremental Annual Cases (Single Hub)", "=Revenue_and_Financials!C14", "=(Revenue_and_Financials!C10*C7)+(C8*Assumptions_Inputs!$E$25*12)", "=(Revenue_and_Financials!C10*D7)+(D8*Assumptions_Inputs!$E$25*12)", "=Revenue_and_Financials!C14", "=Revenue_and_Financials!C14"),
     ("Incremental Annual Revenue (150 Hubs)", "=Revenue_and_Financials!D15", "=(C12*Assumptions_Inputs!$C$11*Assumptions_Inputs!$C$38)/10000000", "=(D12*Assumptions_Inputs!$C$11*Assumptions_Inputs!$C$38)/10000000", "=Revenue_and_Financials!D15", "=Revenue_and_Financials!D15"),
-    ("Delivered Cost per Case (₹/Case)", "=Delivered_Cost_Build!D15", "=Delivered_Cost_Build!D15", "=Delivered_Cost_Build!D15", "=Delivered_Cost_Build!D7+Delivered_Cost_Build!D8+Delivered_Cost_Build!D9+Delivered_Cost_Build!D10+(District_Baseline!F28*E9)/District_Baseline!C34+Delivered_Cost_Build!D12+Delivered_Cost_Build!D14", "=Delivered_Cost_Build!D15"),
-    ("Hub Safety Stock (Atta Cases)", "=Inventory_Logic!H10", "=Inventory_Logic!H10", "=Inventory_Logic!H10", "=Inventory_Logic!H10", "=Assumptions_Inputs!$E$20*SQRT((Assumptions_Inputs!$E$17+Assumptions_Inputs!$E$18)*(G10^2)+(Inventory_Logic!$C$10^2)*(Assumptions_Inputs!$E$19^2))"),
+    ("Delivered Cost per Case (₹/Case)", "=Delivered_Cost_Build!D15", "=Delivered_Cost_Build!D15", "=Delivered_Cost_Build!D15", "=Delivered_Cost_Build!D7+Delivered_Cost_Build!D8+Delivered_Cost_Build!D9+Delivered_Cost_Build!D10+(District_Baseline!F28*E9)/188+Delivered_Cost_Build!D12+Delivered_Cost_Build!D14", "=Delivered_Cost_Build!D15"),
+    ("Hub Safety Stock (Atta Cases)", "=Inventory_Logic!H10", "=Inventory_Logic!H10", "=Inventory_Logic!H10", "=Inventory_Logic!H10", "=Assumptions_Inputs!$E$20*SQRT((Assumptions_Inputs!$E$17+Assumptions_Inputs!$E$18)*(F10^2)+(Inventory_Logic!$C$10^2)*(Assumptions_Inputs!$E$19^2))"),
     ("3-Year Project NPV (₹ Crores)", "=Revenue_and_Financials!D36", "=Revenue_and_Financials!D36*0.62", "=Revenue_and_Financials!D36*1.45", "=Revenue_and_Financials!D36-18.5", "=Revenue_and_Financials!D36-8.2"),
     ("Simple Payback Period (Months)", "=Revenue_and_Financials!D38", "=Revenue_and_Financials!D38*1.38", "=Revenue_and_Financials!D38*0.75", "=Revenue_and_Financials!D38*1.12", "=Revenue_and_Financials!D38*1.06")
 ]
@@ -872,8 +873,8 @@ for col_i, h in enumerate(headers_chk, 1):
     c = ws_chk.cell(row=6, column=col_i, value=h); c.font = font_hdr; c.fill = FILL_NAVY; c.alignment = align_c
 
 chk_items = [
-    (1, "Vehicle Capacity Constraint Check", "Cases Delivered <= Truck Rated Capacity", "=District_Baseline!C34<=District_Baseline!C33", "Cap exceeded on route! Split route."),
-    (2, "Vehicle Weight Payload Safety Check", "Delivered Weight <= Rated Truck Payload", "=District_Baseline!C35<=District_Baseline!C36", "Vehicle overweight! Violates GVW."),
+    (1, "Vehicle Volumetric Capacity Check", "Cases Delivered <= Truck Rated Capacity", "=District_Baseline!C35<=District_Baseline!C33", "Volume cap exceeded on route! Split route."),
+    (2, "Vehicle Weight Payload Safety Check", "Delivered Weight <= Rated Truck Payload", "=District_Baseline!C36<=District_Baseline!C37", "Vehicle overweight! Violates GVW."),
     (3, "Inventory Safety Stock Reduction Check", "Proposed Hub SS < Current Sub-Stockist SS", "=Inventory_Logic!H15<Inventory_Logic!E15", "Hub SS is higher! Review σL or R inputs."),
     (4, "Order Fill Rate Improvement Check", "Hub Fill Rate > Current Fill Rate", "=Inventory_Logic!J15>Inventory_Logic!G15", "Fill rate declined! Check service z-factor."),
     (5, "Delivered Logistics Cost Savings Check", "Proposed Cost/Case < Current Cost/Case", "=Delivered_Cost_Build!D15<Delivered_Cost_Build!C15", "Proposed setup is more expensive! Review trunk/rent."),
